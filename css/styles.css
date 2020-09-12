@@ -134,7 +134,7 @@ p {
     background-color: cornsilk;
     height: 50px;
 }
-.main-nav ul.main-menu {
+.main-nav .main-menu-container {
     display: block;
     position: absolute;
     top: 0;
@@ -147,7 +147,7 @@ p {
     z-index: 2;
 }
 
-.main-nav ul.main-menu.show {
+.main-nav .main-menu-container.show {
     transform: translateX(-20px);
 }
 .main-nav ul{
@@ -286,11 +286,18 @@ p {
         transform: translateX(0);
     }
 }
-/*===========PAGE ONE==============*/
+/*===========PAGES==============*/
+section{
+    height: 100vh;
+}
 .page-one,
 .page-two,
 .page-three{
     margin: 50px 20px;
     padding-top: 50px;
-    height: 100%;
+}
+.box{
+    background-color: burlywood;
+    width: 200px;
+    height: 200px;
 }
