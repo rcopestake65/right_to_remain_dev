@@ -3,15 +3,19 @@ document.querySelector('.menu-open-btn').addEventListener('click', () => documen
 
 document.querySelector('.menu-close-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.toggle('show'));
 
+const closeMenu = document.querySelectorAll(".stage-btn");
+for (let i = 0; i < closeMenu.length; i++){
+    closeMenu[i].addEventListener('click', () => document.querySelector('.main-menu').classList.remove('show'));
+}
 document.querySelector('.menu-close-btn').addEventListener('click', () => document.querySelector('.menu-close-btn').classList.toggle('close-show'));
 
 //contextual problems menu items
-document.querySelector('.problems-menu-open-btn').addEventListener('click', () => document.querySelector('.problems-menu').classList.toggle('show'));
+document.querySelector('.problems-open-btn').addEventListener('click', () => document.querySelector('.problems-container').classList.toggle('show'));
 
-document.querySelector('.problems-menu-open-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.remove('show'));
+document.querySelector('.problems-open-btn').addEventListener('click', () => document.querySelector('.main-menu').classList.remove('show'));
 
-document.querySelector('.problems-menu-open-btn').addEventListener('click', () => document.querySelector('.problems-menu-close-btn').classList.toggle('close-show'));
+document.querySelector('.problems-open-btn').addEventListener('click', () => document.querySelector('.problems-close-btn').classList.toggle('close-show'));
 
-document.querySelector('.problems-menu-close-btn').addEventListener('click', () => document.querySelector('.problems-menu').classList.toggle('show'));
+document.querySelector('.problems-close-btn').addEventListener('click', () => document.querySelector('.problems-container').classList.toggle('show'));
 
-document.querySelector('.problems-menu-close-btn').addEventListener('click', () => document.querySelector('.problems-menu-close-btn').classList.toggle('close-show'));
+document.querySelector('.problems-close-btn').addEventListener('click', () => document.querySelector('.problems-close-btn').classList.toggle('close-show'));

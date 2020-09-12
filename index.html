@@ -9,7 +9,7 @@
     <link rel="canonical" href="#" />
     <link rel="stylesheet" href="/css/reset.css">
     <link rel="stylesheet" href="/css/styles.css">
-    
+
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -18,54 +18,98 @@
 
 <body>
     <!-- main menu & hamburger -->
-    <div class="menu-open-btn">
-        <i class="fas fa-bars fa-2x"></i>
-    </div>
-    <nav class="main-nav">
+    <div class="nav-container">
 
-        <ul class="main-menu">
-            <div class="menu-close-btn">
-                <i class="fas fa-window-close"></i>
+        <nav class="main-nav">
+            <div class="menu-open-btn">
+                <i class="fas fa-bars fa-2x"></i>
+                <h2><i class="fas fa-arrow-left"></i> Stages of the asylum journey</h2>
             </div>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="#">Testimonials</a>
-            </li>
-            <li>
-                <a href="#">Contact</a>
-            </li>
-        </ul>
-    </nav>
+            <ul class="main-menu">
+                <div class="menu-close-btn">
+                    <i class="fas fa-window-close"></i>
+                </div>
+                <h2>Stages of the asylum journey</h2>
+                <li>
+                    <a class="stage-btn" href="#one">Claim Asylum</a>
+                </li>
+                <li>
+                    <a class="stage-btn" href="#two">Welfare Interview</a>
+                </li>
+                <li>
+                    <a class="stage-btn" href="#three">Local Authority Care</a>
+                </li>
+                <li>
+                    <a class="stage-btn" href="#">Evidence Form</a>
+                </li>
+                <li>
+                    <a class="stage-btn" href="#">Home Office positive decision</a>
+                </li>
+                <li>
+                    <a class="stage-btn" href="#">Home Office refusal: UASC leave
+                    </a>
+                </li>
+                <li>
+                    <a class="stage-btn" href="#">Submit appeal
+                    </a>
+                </li>
+                <li>
+                    <a class="stage-btn" href="#">Appeal hearing
+                    </a>
+                </li>
 
-    <!-- problems slide menu -->
-    <div class="problems-menu-open-btn">
-        <i class="fas fa-bars fa-2x"></i>
-    </div>
-    <div class="problems-nav">
-        <div class="problems-menu-close-btn">
-            <i class="fas fa-window-close"></i>
-        </div>
-        <ul class="problems-menu">
-            <li>
-                <a href="/">Problem 1</a>
-            </li>
-            <li>
-                <a href="#">Problem 2</a>
-            </li>
-            <li>
-                <a href="#">Problem 3</a>
-            </li>
-        </ul>
+            </ul>
         </nav>
-        <div class="main">
-            <div class="container">
-                <h1>Right to Remain - Asylum Journey</h1>
+    </div>
+
+    <!-- site content -->
+    <div class="container one">
+        <div class="page-one" id="one">
+
+            <h1>Right to Remain - Asylum Journey</h1>
+
+        </div>
+    </div>
+    <div class="container two">
+        <div class="page-two" id="two">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum libero recusandae
+            atque dolore beatae. Ut doloribus at libero voluptates ab asperiores tempora nostrum officiis nobis unde
+            minima, quidem praesentium provident?
+
+            <!-- problems slide div -->
+            <div class="problems-open-btn">
+                <h2>Common Problems <i class="fas fa-arrow-right"></i> </h2><i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div class="problems-container">
+                <div class="problems-grid">
+                    <div class="problems-close-btn">
+                        <i class="fas fa-window-close"></i>
+                    </div>
+                    <div class="item item-1">
+                        <h2>Problem 1</h2>
+                    </div>
+                    <div class="item item-2">
+                        <h2>Problem 2</h2>
+                    </div>
+                    <div class="item item-3">
+                        <h2>Problem 3</h2>
+                    </div>
+
+                    <div class="item item-4">
+                        <h2>Problem 4</h2>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
+    <div class="container three">
+        <div class="page-three" id="three">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum libero
+            recusandae atque dolore beatae. Ut doloribus at libero voluptates ab asperiores tempora nostrum officiis
+            nobis unde minima, quidem praesentium provident?</div>
+</div>
+    
 
-        <script src="/js/sliding-menus.js"></script>
+
+    <script src="/js/sliding-menus.js"></script>
 </body>
 
 </html>

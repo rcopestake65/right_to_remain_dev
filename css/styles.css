@@ -13,7 +13,7 @@ Steve Mersereau | Richard Copestake
 * {
     box-sizing: border-box;
 }
-
+html,body{height:100%;margin:0;padding:0}
 body {
     font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
     font-size: 16px;
@@ -70,172 +70,155 @@ p {
 /*======LAYOUT======*/
 
 .container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
 }
+.container.one {
+    background-color: antiquewhite;
+}
+.container.two {
+    background-color: aliceblue;
+}
+.container.three {
+    background-color: bisque;
+}
 
-/*======MAIN NAVIGATION & HAMBURGER======*/
 
-.main-nav {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 0;
-  }
-  
-  .main-nav ul {
-    display: flex;
-    list-style-type: none;
-  }
-  
-  .main-nav ul li {
-    padding: 0 10px;
-  }
-  .main-nav ul li:last-of-type {
-    padding-right: 0;
-  }
-  
-  .main-nav ul li a {
-    color: #0c71c3;
-    transition: all .1s ease-in-out;
-    font-size: 1.1rem;
-  }
-  
-  .main-nav ul li a:hover {
-  color: var(--gold);
-  }
-  .main-nav ul li a.active {
-  color: var(--gold);
-  }
+/*======MAIN NAVIGATION - Asylum Journey======*/
 
-  /*=========Hamburger===========*/
+/*open & close btns*/
 
-  /*open & close btns*/
-  .menu-open-btn {
+.menu-open-btn {
     display: none;
 }
-  .menu-close-btn {
+
+.menu-close-btn {
+    display: none;
+}
+
+.menu-open-btn {
+    display: block;
+    padding: 10px 0 0 10px;
+}
+
+.menu-close-btn {
     display: block;
     cursor: pointer;
     position: absolute;
-    top: 0px;
-    left: 70%;
+    top: 0;
+    left: 10px;
     border: 0;
     font-weight: bold;
     padding: 10px 20px;
     color: #fff;
     font-size: 25px;
     z-index: 12;
-  }
-
- 
-/*media q's for off-screen menu*/
-@media(max-width: 900px) {
- .menu-open-btn {
-      display: block;
-      margin: 10px 0 0 10px;
-  }
+}
 
 .fa-bars::before {
-  color: var(--blue);
-  transition: .3s;
+    color: var(--blue);
+    transition: .3s;
 }
+
 .fa-bars:hover::before {
-  color: var(--gold);
+    color: var(--gold);
 }
+
 .menu-open-btn:hover {
-      opacity: .8;
-  }
+    opacity: .8;
+}
+.nav-container{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color: cornsilk;
+    height: 50px;
+}
+.main-nav ul.main-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--blue);
+    width: 50%;
+    padding: 30px;
+    transform: translateX(-700px);
+    transition: transform 0.5s ease-in-out;
+    z-index: 2;
+}
 
-
-.main-nav ul.main-menu{
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      background: var(--blue);
-      width: 50%;
-      padding: 30px;
-      transform: translateX(-700px);
-      transition: transform 0.5s ease-in-out;
-      z-index: 2;
-  }
-  .main-nav ul.main-menu.show {
+.main-nav ul.main-menu.show {
     transform: translateX(-20px);
 }
-  .main-nav ul.main-menu li {
-      padding: 10px;
-      border-bottom: 1px solid #478fcf;
-  }
-  
-  .main-nav ul.main-menu ul li:hover{
-    background-color: var(--blue-hover);
-  }
-  .main-nav ul.main-menu ul li a:hover{
-    color: #fff;
-  }
-  .main-nav ul.main-menu li:last-child {
-      border-bottom: 0;
-  }
+.main-nav ul{
+    list-style-type: none;
+    margin-left: 0;
+}
+.main-nav ul.main-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+}
 
- 
-  .main-nav ul li a {
+.main-nav ul.main-menu ul li:hover {
+    background-color: var(--blue-hover);
+}
+.main-nav ul.main-menu li:last-child {
+    border-bottom: 0;
+}
+
+.main-nav ul li a {
     color: #fff;
     transition: all .1s ease-in-out;
     font-size: 1rem;
     display: block;
 }
-} 
-/*======PROBLEMS NAVIGATION & HAMBURGER======*/
-/*
-.problems-nav {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    margin-top: 0;
-  }
-  
-  .problems-nav ul {
-    display: flex;
-    list-style-type: none;
-  }
-  
-  .problems-nav ul li {
+.main-nav ul.main-menu ul li a:hover {
+    color: var(--gold);
+}
+.main-nav ul li {
     padding: 0 10px;
-  }
-  .problems-nav ul li:last-of-type {
-    padding-right: 0;
-  }
-  
-  .problems-nav ul li a {
-    color: #0c71c3;
-    transition: all .1s ease-in-out;
-    font-size: 1.1rem;
-  }
-  
-  .problems-nav ul li a:hover {
-  color: var(--gold);
-  }
-  .problems-nav ul li a.active {
-  color: var(--gold);
-  }*/
+}
 
-  /*Hamburger*/
-   /*open & close btns*/
-   
-  .problems-menu-open-btn {
+.main-nav ul li:last-of-type {
+    padding-right: 0;
+}
+
+.main-nav ul li a.active {
+    color: var(--gold);
+}
+
+.main-nav h2 {
+    display: inline;
+    font-size: 1.1rem;
+    padding-left: 20px;
+    cursor: pointer;
+    color: #000;
+}
+
+
+
+/*======PROBLEMS Slide in & Cards======*/
+
+/*open & close btns*/
+
+.problems-open-btn {
     cursor: pointer;
     position: absolute;
     top: 10px;
     right: 10px;
-  }
-  
-  .problems-menu-close-btn {
+}
+.problems-open-btn h2{
+    display: inline;
+    font-size: 1.1rem;
+    padding-right: 20px;
+    cursor: pointer;
+}
+.problems-close-btn {
     display: block;
     cursor: pointer;
     position: absolute;
-    top: 0px;
-    right: 10px;
+    top: 0;
+    right: 0;
     border: 0;
     font-weight: bold;
     padding: 10px 20px;
@@ -244,60 +227,70 @@ p {
     transform: translateX(750px);
     transition: transform 0.5s ease-in-out;
     z-index: 12;
-  }
-  .problems-menu-open-btn .fa-bars::before {
+}
+
+.problems-open-btn .fa-bars::before {
     color: var(--gold);
     transition: .3s;
-  }
-  .problems-menu-open-btn .fa-bars:hover::before {
-    color: var(--gold);
-  }
-  .problems-menu-open-btn:hover {
-        opacity: .8;
-    }
-  .problems-menu-close-btn.close-show{
-    transform: translateX(-20px);
-  }
+}
 
+.problems-open-btn .fa-bars:hover::before {
+    color: var(--gold);
+}
+
+.problems-open-btn:hover {
+    opacity: .8;
+}
+
+.problems-close-btn.close-show {
+    transform: translateX(-20px);
+}
+
+/*=======styling the problems cards========*/
+
+.problems-container {
+    height: 100vh;
+}
+
+.problems-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.problems-grid h2 {
+    color: #fff;
+    margin: 1rem 0;
+}
+
+.problems-grid .item {
+    background-color: #0c71c3;
+}
 
 /*media q's for Problems off-screen menu*/
+
 @media(max-width: 4000px) {
-
-.problems-nav ul.problems-menu {
-      display: block;
-      position: absolute;
-      top: 0;
-      right: 0;
-      background: var(--blue);
-      width: 100%;
-      padding: 30px;
-      transform: translateX(3000px);
-      transition: transform 0.5s ease-in-out;
-      z-index: 10;
-  }
-
-  .problems-nav ul.problems-menu li {
-      padding: 10px;
-      border-bottom: 1px solid #478fcf;
-  }
-  
-  .problems-nav ul.problems-menu ul li:hover{
-    background-color: var(--blue-hover);
-  }
-  .problems-nav ul.problems-menu ul li a:hover{
-    color: #fff;
-  }
-  .mproblems-nav ul.problems-menu li:last-child {
-      border-bottom: 0;
-  }
-
-  .problems-nav ul.problems-menu.show {
-      transform: translateX(0);
-  }
-  .problems-nav ul li a {
-    color: #fff;
-    transition: all .1s ease-in-out;
-    font-size: 1rem;
-    display: block;
+    .problems-container {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background: var(--blue);
+        width: 100%;
+        padding: 30px;
+        transform: translateX(3000px);
+        transition: transform 0.5s ease-in-out;
+        z-index: 10;
+    }
+    .problems-container.show {
+        transform: translateX(0);
+    }
 }
-} 
+/*===========PAGE ONE==============*/
+.page-one,
+.page-two,
+.page-three{
+    margin: 50px 20px;
+    padding-top: 50px;
+    height: 100%;
+}
