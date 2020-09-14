@@ -6,9 +6,13 @@
 gsap.to(".box", {
 scrollTrigger: {
     trigger: '.box',
-    start: "center 100px"
+    start: "bottom bottom",
+    scrub: true
 },
-x: 500
+x: 500,
+rotation: 360,
+ease: "none",
+duration: 3
 
 })
 
