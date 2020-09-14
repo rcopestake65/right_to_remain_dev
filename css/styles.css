@@ -246,7 +246,9 @@ p {
 .problems-container {
     height: 100vh;
 }
-
+.problems-container h3{
+    color: #fff;
+}
 .problems-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
