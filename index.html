@@ -1,19 +1,20 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="canonical" href="#" />
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-<title>Right to Remain - Asylum Journey</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <title>Right to Remain - Asylum Journey</title>
 </head>
 
 <body>
@@ -30,7 +31,7 @@
                     <i class="fas fa-window-close"></i>
                 </div>
                 <ul class="main-menu">
-                
+
                     <h2>Stages of the asylum journey</h2>
                     <li>
                         <a class="stage-btn" href="#one">Claim Asylum</a>
@@ -59,25 +60,31 @@
                         <a class="stage-btn" href="#">Appeal hearing
                         </a>
                     </li>
-    
+
                 </ul>
             </div>
- 
+
         </nav>
     </div>
 
     <!-- site content -->
-    <div class="container one">
-        <section class="page-one" id="one">
 
+    <section class="stage-one" id="one">
+        <div class="stage-one-container">
             <h3>Page One</h3>
-Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est aliquid praesentium similique sit asperiores id non, voluptas sed iste enim reprehenderit officia. Dolorem, eaque quam. Culpa eveniet a est nesciunt.
-        </section>
-    </div>
-    <div class="container two">
-       
-        <section class="page-two" id="two">
-            
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est aliquid praesentium similique sit asperiores
+            id non, voluptas sed iste enim reprehenderit officia. Dolorem, eaque quam. Culpa eveniet a est nesciunt.
+        </div>
+    </section><!-- end stage-one -->
+
+
+
+
+
+
+
+    <section class="stage-two" id="two">
+        <div class="stage-two-container">
             <h3>Page Two</h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum libero
             recusandae
@@ -86,21 +93,76 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est aliquid praesentiu
             <div class="box">
                 A moving box
             </div>
-        </section>
-    </div>
-    <div class="container three">
-        <section class="page-three" id="three">
+
+            <!-- problems slide div -->
+            <div class="problems-open-btn problems-open-btn-1">
+                <h2>Common Problems Stage - 1 <i class="fas fa-arrow-right"></i> </h2><i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div class="problems-container problems-container-1">
+                <div class="problems-grid">
+                    <div class="problems-close-btn problems-close-btn-1">
+                        <i class="fas fa-window-close fa-2x"></i>
+                    </div>
+                    <h3>Problems for stage 1</h3>
+                    <div class="item item-1">
+                        <h2>Problem 1</h2>
+                    </div>
+                    <div class="item item-2">
+                        <h2>Problem 2</h2>
+                    </div>
+                    <div class="item item-3">
+                        <h2>Problem 3</h2>
+                    </div>
+
+                    <div class="item item-4">
+                        <h2>Problem 4</h2>
+                    </div>
+                </div>
+            </div><!-- end. problem slide -->
+        </div>
+    </section><!-- end stage two -->
+
+    <section class="stage-three" id="three">
+        <div class="stage-three-container">
             <h3>Page Three</h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum libero
             recusandae atque dolore beatae. Ut doloribus at libero voluptates ab asperiores tempora nostrum officiis
             nobis unde minima, quidem praesentium provident?
-        </section>
-    </div>
+            <!-- problems slide div -->
+            <div class="problems-open-btn problems-open-btn-2">
+                <h2>Common Problems Stage - 2 <i class="fas fa-arrow-right"></i> </h2><i class="fas fa-bars fa-2x"></i>
+            </div>
+            <div class="problems-container  problems-container-2">
+                <div class="problems-grid">
+                    <div class="problems-close-btn problems-close-btn-2">
+                        <i class="fas fa-window-close fa-2x"></i>
+                    </div>
+                    <h3>Problems for stage 2</h3>
+                    <div class="item item-1">
+                        <h2>Problem 1</h2>
+                    </div>
+                    <div class="item item-2">
+                        <h2>Problem 2</h2>
+                    </div>
+                    <div class="item item-3">
+                        <h2>Problem 3</h2>
+                    </div>
+
+                    <div class="item item-4">
+                        <h2>Problem 4</h2>
+                    </div>
+                </div>
+            </div><!-- end. problem slide -->
+        </div>
+
+    </section><!-- end stage three -->
 
 
 
-    <script src="/js/sliding-menus.js"></script>
-    <script src="/js/gsap.js"></script>
+
+    <script src="js/sliding-menus.js"></script>
+    <script src="js/problems-menu.js"></script>
+    <script src="js/gsap.js"></script>
 </body>
 
 </html>
