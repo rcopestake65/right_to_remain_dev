@@ -283,12 +283,18 @@ p {
 }
 
 /*===========PAGES==============*/
-
+.site-content{
+    height: 100vh;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
 section {
     height: 100vh;
     position: relative;
     margin: 50px 0;
     z-index: -1;
+    
+    scroll-snap-align: start;
 
     
 }
