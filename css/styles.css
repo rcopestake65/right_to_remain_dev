@@ -150,7 +150,12 @@ p {
     transition: transform 0.5s ease-in-out;
     z-index: 2;
 }
-
+/*wider slide-in main nav on small devices*/
+@media (max-width: 750px){
+    .main-nav .main-menu-container {
+        width: 80%;
+    }
+}
 .main-nav .main-menu-container.show {
     transform: translateX(-20px);
 }
@@ -211,7 +216,7 @@ p {
 .problems-open-btn {
     cursor: pointer;
     position: absolute;
-    top: 0;
+    top: 10px;
     right: 10px;
     z-index: 2;
 }
@@ -272,7 +277,7 @@ p {
 .problems-container {
     display: block;
     position: absolute;
-    top: 0;
+    top: -35px;
     right: 0;
     background: var(--blue);
     width: 100%;
@@ -312,6 +317,7 @@ section {
 }
 .home h2{
     font-size: 2.5rem;
+    line-height: 2.8rem;
 }
 .home p{
     max-width: 60%;
@@ -326,6 +332,7 @@ section {
     align-items: center;
     color: #fff;
     padding-top: 100px;
+    text-align: center;
 }
 .map h3{
  font-size: 2rem;
@@ -340,7 +347,7 @@ section {
     padding: 0;
 }
 .stage-one, .stage-two, .stage-three {
-    padding: 50px;
+    padding: 70px;
     height: 100vh;
 }
 .stage-one {
@@ -407,6 +414,11 @@ section {
       height: 100vh;
       background-color: #000;
       color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
   }
 /*-- Claim Asylum --
 .claim-asylum-problem-container{

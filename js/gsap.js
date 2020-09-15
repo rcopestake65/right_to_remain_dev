@@ -14,6 +14,7 @@ ScrollTrigger.create({
   endTrigger: "#two",
   end: "top center",
   pin: ".problem-content-one",
+  anticipatePin: 1, 
   //markers: true,
   pinSpacing: false
 });
@@ -24,6 +25,7 @@ ScrollTrigger.create({
   endTrigger: "#three",
   end: "top center",
   pin: ".problem-content-two",
+  anticipatePin: 1, 
  // markers: true,
   pinSpacing: false
 });
@@ -34,13 +36,23 @@ ScrollTrigger.create({
   endTrigger: "#footer",
   end: "top center",
   pin: ".problem-content-three",
+  anticipatePin: 1, 
  // markers: true,
   pinSpacing: false
 });
 
 
+// animation of problem cards testing
 
-
+var tween = gsap.to(".item-1", {
+  duration: 4, 
+  x: 750, 
+  rotation: 360, 
+  ease: "none", 
+  paused: true
+});
+// click handlers for controlling the tween instance...
+document.querySelector(".problems-open-btn-1").onclick = () => tween.play();
 
 
 
