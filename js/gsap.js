@@ -44,15 +44,24 @@ ScrollTrigger.create({
 
 // animation of problem cards testing
 
-var tween = gsap.to(".item-1", {
-  duration: 4, 
+/*var tween = gsap.to(".item", {
+  duration: 1, 
   x: 750, 
-  rotation: 360, 
-  ease: "none", 
-  paused: true
+  rotation: 360,
+  ease: "power2.inOut", 
+  paused: true,
+  delay: 0.5
 });
+
+var tl;
+
+var tl = gsap.timeline({delay:0.5, repeat:3, repeatDelay:2.5});
+
+ tl.from(".item", {duration: 2, backgroundColor: "#000"})
+
 // click handlers for controlling the tween instance...
-document.querySelector(".problems-open-btn-1").onclick = () => tween.play();
+document.querySelector(".problems-open-btn-1").onclick = () => tween.play();*/
+
 
 
 
