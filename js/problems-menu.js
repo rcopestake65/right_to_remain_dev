@@ -26,4 +26,7 @@ for (let i = 0; i < openProblemMenu.length; i++) {
     openProblemMenu[i].addEventListener('click', () => document.querySelector('.main-menu-container').classList.remove('show'));
 }
 
+//Actions
+document.querySelector('.actions-btn-1').addEventListener('click', () => document.querySelector('.actions-container').classList.toggle('show'));
+document.querySelector('.actions-close-btn-1').addEventListener('click', () => document.querySelector('.actions-container').classList.remove('show'));
 

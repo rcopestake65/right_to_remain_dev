@@ -261,8 +261,16 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
+    color: #fff;
 }
-
+.problems-grid a {
+    color: #fff;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+}
+.problems-grid a:hover {
+    color:cadetblue;
+}
 .problems-grid h2 {
     color: #fff;
     margin: 1rem 0;
@@ -271,7 +279,27 @@ p {
 .problems-grid .item {
     
 }
-
+/*==== Action Cards =======*/
+.actions-container {
+    position: relative;
+    background: greenyellow;
+    padding: 30px;
+    opacity: 0;
+    transition-property: opacity;
+    transition: all .5s;
+    z-index: 1;
+}
+.actions-container.show {
+    opacity: 1;
+    z-index: 2;
+}
+.actions-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #fff;
+}
 /*media q's for Problems off-screen menu*/
 
 .problems-container {
@@ -306,7 +334,10 @@ section {
 .home{
     margin-top: 0;
     margin-bottom: 50px;
-    background-color: cadetblue;
+    background: #0f0c29;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     position: relative;
     text-align: center;
     color: #fff;
@@ -361,6 +392,11 @@ section {
     background-color: bisque;
 }
 /*====== home page ======*/
+
+.logo-img{
+    margin-bottom: 3rem;
+}
+
 
 /*animated scroll button*/
 #scroll-btn a {
