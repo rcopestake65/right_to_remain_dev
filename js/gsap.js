@@ -14,7 +14,27 @@ ScrollTrigger.create({
   endTrigger: "#two",
   end: "top center",
   pin: ".problem-content-one",
-  markers: true,
+  //markers: true,
+  pinSpacing: false
+});
+
+ScrollTrigger.create({
+  trigger: ".problem-container-two",
+  start: "top 100px",
+  endTrigger: "#three",
+  end: "top center",
+  pin: ".problem-content-two",
+ // markers: true,
+  pinSpacing: false
+});
+
+ScrollTrigger.create({
+  trigger: ".problem-container-three",
+  start: "top 100px",
+  endTrigger: "#footer",
+  end: "top center",
+  pin: ".problem-content-three",
+ // markers: true,
   pinSpacing: false
 });
 

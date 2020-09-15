@@ -272,7 +272,7 @@ p {
 .problems-container {
     display: block;
     position: absolute;
-    top: 50px;
+    top: 0;
     right: 0;
     background: var(--blue);
     width: 100%;
@@ -296,7 +296,7 @@ section {
     height: 100vh;
     position: relative;
     margin: 0;
-    padding: 60px 30px;
+    padding: 0;
 }
 .home{
     margin-top: 0;
@@ -339,10 +339,13 @@ section {
     margin: 0;
     padding: 0;
 }
+.stage-one, .stage-two, .stage-three {
+    padding: 50px;
+    height: 100vh;
+}
 .stage-one {
     background-color: antiquewhite;
 }
-
 .stage-two {
     background-color: aliceblue;
 }
@@ -399,6 +402,12 @@ section {
     }
   }
 
+  /*==========FOOTER===========*/
+  footer{
+      height: 100vh;
+      background-color: #000;
+      color: #fff;
+  }
 /*-- Claim Asylum --
 .claim-asylum-problem-container{
     height: 100px;
