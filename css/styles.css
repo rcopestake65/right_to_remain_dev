@@ -355,9 +355,10 @@ section {
     font-size: 1.3rem;
     line-height: 1.6rem;
 }
+/*==== MAP OVRVIEW ==*/
 .map{
     margin-bottom: 50px;
-    background-color: darksalmon;
+    background: #F6BC4D;  /* fallback for old browsers */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -372,6 +373,13 @@ section {
     max-width: 60%;
     font-size: 1.3rem;
     line-height: 1.6rem;
+}
+/*SVG Map*/
+.tube-map{
+    max-width: 60%;
+}
+.tube-map a.map-item-one:hover{
+    fill: greenyellow !important;
 }
 .nav-container{
     margin: 0;
