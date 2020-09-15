@@ -16,6 +16,10 @@ document.querySelector('.problems-open-btn-2').addEventListener('click', () => d
 
 document.querySelector('.problems-close-btn-2').addEventListener('click', () => document.querySelector('.problems-container-2').classList.toggle('show'));
 
+document.querySelector('.problems-open-btn-3').addEventListener('click', () => document.querySelector('.problems-container-3').classList.toggle('show'));
+
+document.querySelector('.problems-close-btn-3').addEventListener('click', () => document.querySelector('.problems-container-3').classList.toggle('show'));
+
 //close main-menu if a Problems button has been clicked
 const openProblemMenu = document.querySelectorAll(".problems-open-btn");
 for (let i = 0; i < openProblemMenu.length; i++) {
