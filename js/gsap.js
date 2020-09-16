@@ -1,3 +1,5 @@
+//================ MENUS =====================
+
 //fix navbar to top once it reaches it
 ScrollTrigger.create({
   trigger: ".nav-container",
@@ -7,7 +9,7 @@ ScrollTrigger.create({
   //markers: true,
   pinSpacing: false
 });
-
+//fix problem menus to top
 ScrollTrigger.create({
   trigger: ".problem-container-one",
   start: "top 100px",
@@ -40,6 +42,25 @@ ScrollTrigger.create({
  // markers: true,
   pinSpacing: false
 });
+
+// ============================ MAP ITEMS ================================
+
+/*ScrollTrigger.create({
+  trigger: ".map",
+  start: "top 100px",
+  endTrigger: "#footer",
+  end: "top center",
+  pin: ".map-item-1",
+  anticipatePin: 1, 
+  markers: true,
+  pinSpacing: false
+});*/
+
+gsap.to(".map-item-1",) {
+  ScrollTrigger: ".map-item-1",
+  x: 400,
+});
+
 
 
 // animation of problem cards testing

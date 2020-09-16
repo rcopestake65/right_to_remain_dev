@@ -439,7 +439,10 @@ section {
     font-size: 1.3rem;
     line-height: 1.6rem;
 }
-
+.map-item-1{
+    padding: 30px;
+    background-color: hotpink;
+}
 
   /*=== FOOTER ===*/
   footer{
