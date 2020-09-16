@@ -533,7 +533,7 @@ section.map{
 /*=== MEDIA QUERIES FOR HEIGHT ISSUE ON MOBILES ===*/
 @media (max-width: 375px){
     .slide, footer,  .problems-container, section {
-        height: -webkit-fill-available;
+        height: 100%;
     }
     
 }
