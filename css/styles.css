@@ -333,7 +333,6 @@ p {
 /*=== general/site-wide ===*/
 section {
     height: 100vh;
-    height: -webkit-fill-available;
     /*position: relative;*/
     margin: 0;
     padding: 0;
@@ -531,9 +530,9 @@ section.map{
 }*/
 
 /*=== MEDIA QUERIES FOR HEIGHT ISSUE ON MOBILES ===*/
-@media (max-width: 375px){
+@media (max-width: 700px){
     .slide, footer,  .problems-container, section {
-        height: 100%;
+        height: auto;
     }
     
 }
