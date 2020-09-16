@@ -29,7 +29,7 @@ body {
     line-height: 1.7rem;
 }
 
-/*======TYPOGRAPHIC STYLES & UTLITIES======*/
+/*======= TYPOGRAPHIC STYLES & UTLITIES ========================*/
 
 .hidden {
     position: absolute;
@@ -75,16 +75,16 @@ p {
     margin-bottom: 2rem;
 }
 
-/*======LAYOUT======*/
+/*===== LAYOUT ====================================*/
 
 .container {
     width: 100%;
     margin: 0 auto;
 }
 
-/*======MAIN NAVIGATION - Asylum Journey======*/
+/*===== MAIN NAVIGATION - Asylum Journey ==================*/
 
-/*open & close btns*/
+/*=== open & close btns ===*/
 
 .menu-open-btn {
     display: none;
@@ -132,8 +132,10 @@ p {
     top: 0;
     height: 50px;
     z-index: 2;
-    
+    margin: 0;
+    padding: 0;   
 }
+
 .main-nav{
     background-color: #fff;
     padding: 5px 0 10px 0;
@@ -150,7 +152,7 @@ p {
     transition: transform 0.5s ease-in-out;
     z-index: 2;
 }
-/*wider slide-in main nav on small devices*/
+/*=== wider slide-in main nav on small devices ===*/
 @media (max-width: 750px){
     .main-nav .main-menu-container {
         width: 80%;
@@ -209,7 +211,7 @@ p {
     color: #000;
 }
 
-/*======PROBLEMS Slide in & Cards======*/
+/*=================== PROBLEMS =================================*/
 
 /*open & close btns*/
 
@@ -249,7 +251,7 @@ p {
     color: #fff;
 }
 
-/*=======styling the problems cards========*/
+/*=== styling the problems cards ===*/
 
 .problems-container {
     height: 100vh;
@@ -275,11 +277,27 @@ p {
     color: #fff;
     margin: 1rem 0;
 }
+/*=== Problems off-screen menu ===*/
 
-.problems-grid .item {
-    
+.problems-container {
+    display: block;
+    position: absolute;
+    top: -35px;
+    right: 0;
+    background: var(--blue);
+    width: 100%;
+    padding: 30px;
+    opacity: 0;
+    transition-property: opacity;
+    transition: all .5s;
+    z-index: 1;
 }
-/*==== Action Cards =======*/
+
+.problems-container.show {
+    opacity: 1;
+    z-index: 2;
+}
+/*=== Action Cards ===*/
 .actions-container {
     position: relative;
     background: greenyellow;
@@ -300,37 +318,33 @@ p {
     cursor: pointer;
     color: #fff;
 }
-/*media q's for Problems off-screen menu*/
-
-.problems-container {
-    display: block;
-    position: absolute;
-    top: -35px;
-    right: 0;
-    background: var(--blue);
-    width: 100%;
-    padding: 30px;
-    opacity: 0;
-    transition-property: opacity;
-    transition: all .5s;
-    z-index: 1;
-}
-
-.problems-container.show {
-    opacity: 1;
-    z-index: 2;
-}
-
-/*===========PAGES==============*/
-/*general/site-wide*/
 
 
+/*=========== PAGES ===========================================================*/
+
+/*=== general/site-wide ===*/
 section {
     height: 100vh;
     position: relative;
     margin: 0;
     padding: 0;
 }
+
+.slide-three-main, .slide-four-main, .slide-five-main {
+    padding: 70px;
+    height: 100vh;
+}
+.slide-three-main {
+    background-color: antiquewhite;
+}
+.slide-four-main {
+    background-color: aliceblue;
+}
+.slide-five-main {
+    background-color: bisque;
+}
+
+/*=== Home ===*/
 .home{
     margin-top: 0;
     margin-bottom: 50px;
@@ -355,58 +369,12 @@ section {
     font-size: 1.3rem;
     line-height: 1.6rem;
 }
-/*==== MAP OVRVIEW ==*/
-.map{
-    margin-bottom: 50px;
-    background: #F6BC4D;  /* fallback for old browsers */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #fff;
-    padding-top: 100px;
-    text-align: center;
-}
-.map h3{
- font-size: 2rem;
-}
-.map p{
-    max-width: 60%;
-    font-size: 1.3rem;
-    line-height: 1.6rem;
-}
-/*SVG Map*/
-.tube-map{
-    max-width: 60%;
-}
-.tube-map a.map-item-one:hover{
-    fill: greenyellow !important;
-}
-.nav-container{
-    margin: 0;
-    padding: 0;
-}
-.stage-one, .stage-two, .stage-three {
-    padding: 70px;
-    height: 100vh;
-}
-.stage-one {
-    background-color: antiquewhite;
-}
-.stage-two {
-    background-color: aliceblue;
-}
-
-.stage-three {
-    background-color: bisque;
-}
-/*====== home page ======*/
-
 .logo-img{
     margin-bottom: 3rem;
 }
 
 
-/*animated scroll button*/
+/*=== animated scroll button ===*/
 #scroll-btn a {
     padding-top: 70px;
   }
@@ -452,8 +420,28 @@ section {
       opacity: 0;
     }
   }
+/*==== MAP OVRVIEW ===*/
+.map{
+    margin-bottom: 50px;
+    background: #F6BC4D;  /* fallback for old browsers */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding-top: 100px;
+    text-align: center;
+}
+.map h3{
+ font-size: 2rem;
+}
+.map p{
+    max-width: 60%;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
 
-  /*==========FOOTER===========*/
+
+  /*=== FOOTER ===*/
   footer{
       height: 100vh;
       background-color: #000;
