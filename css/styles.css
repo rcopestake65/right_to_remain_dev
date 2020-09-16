@@ -333,7 +333,8 @@ p {
 /*=== general/site-wide ===*/
 section {
     height: 100vh;
-    position: relative;
+    height: -webkit-fill-available;
+    /*position: relative;*/
     margin: 0;
     padding: 0;
 }
@@ -341,6 +342,7 @@ section {
     padding: 70px;
     height: 100vh;
 }
+
 .slide-three-main, .slide-four-main, .slide-five-main {
 /*nothing yet but might be need to target specific slides*/
 }
@@ -455,6 +457,11 @@ section.map{
     right: 0;
     max-width: 1000px;
 }
+@media (max-width: 375px){
+    .map-item-container{
+        max-width: 300px;
+    }
+}
 .map h3{
  font-size: 2rem;
 }
@@ -522,3 +529,11 @@ section.map{
     margin: 0;
     padding: 60px 30px;
 }*/
+
+/*=== MEDIA QUERIES FOR HEIGHT ISSUE ON MOBILES ===*/
+@media (max-width: 375px){
+    .slide, footer,  .problems-container, section {
+        height: -webkit-fill-available;
+    }
+    
+}

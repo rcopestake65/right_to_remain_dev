@@ -1,3 +1,9 @@
+function installMediaQueryWatcher(mediaQuery, layoutChangedCallback) {
+  var mql = window.matchMedia(mediaQuery);
+  mql.addListener(function (e) { return layoutChangedCallback(e.matches); });
+  layoutChangedCallback(mql.matches);
+}
+
 //fix navbar to top once it reaches it
 ScrollTrigger.create({
   trigger: ".nav-container",
@@ -55,7 +61,8 @@ ScrollTrigger.create({
   pinSpacing: false
 });*/
 
-
+installMediaQueryWatcher("(min-width: 600px)", function(matches) {
+  if (matches) {
 
 gsap.to(".map-item-1", {
   scrollTrigger: {
@@ -161,5 +168,112 @@ gsap.to(".map-item-8", {
   markers: true
 });
 
+  } else {
 
+    gsap.to(".map-item-1", {
+      scrollTrigger: {
+        trigger: ".map-item-1",
+        //markers: true
+    },
+      x: 0,
+      y: 0,
+      duration: .5,
+      ease: "power.inOut(1, 0.3)",
+      autoAlpha: 1,
+      
+    });
+    
+    gsap.to(".map-item-2", {
+      scrollTrigger: {
+        trigger: ".map-item-2",
+    },  
+      y: 50,
+      x: 0,
+      duration: .7,
+      ease: "power.inOut(1, 0.3)",
+      autoAlpha: 1,
+      scrub: true,
+      markers: true
+    });
+    
+    gsap.to(".map-item-3", {
+      scrollTrigger: {
+        trigger: ".map-item-3",
+    }, 
+      y: 100,
+      x: 0,
+      duration: .7,
+      ease: "power.inOut(1, 0.3)",
+      autoAlpha: 1,
+      scrub: true,
+      markers: true
+    });
+    
+    gsap.to(".map-item-4", {
+      scrollTrigger: {
+        trigger: ".map-item-4",
+    }, 
+      y: 150,
+      x: 0,
+      duration: .7,
+      ease: "power.inOut(1, 0.3)",
+      autoAlpha: 1,
+      scrub: true,
+      markers: true
+    });
+    
+    gsap.to(".map-item-5", {
+      scrollTrigger: {
+        trigger: ".map-item-5",
+    }, 
+      y: 200,
+      x: 0,
+      duration: .7,
+      ease: "power.inOut(1, 0.3)",
+      autoAlpha: 1,
+      scrub: true,
+      markers: true
+    });
+    
+    gsap.to(".map-item-6", {
+      scrollTrigger: {
+        trigger: ".map-item-6",
+    }, 
+      y: 250,
+      x: 0,
+      duration: .7,
+      ease: "power.inOut(1, 0.3)",
+      autoAlpha: 1,
+      scrub: true,
+      markers: true
+    });
+    
+    gsap.to(".map-item-7", {
+      scrollTrigger: {
+        trigger: ".map-item-7",
+    }, 
+      y: 300,
+      x: 0,
+      duration: .7,
+      ease: "power.inOut(1, 0.3)",
+      autoAlpha: 1,
+      scrub: true,
+      markers: true
+    });
+    
+    gsap.to(".map-item-8", {
+      scrollTrigger: {
+        trigger: ".map-item-8",
+    }, 
+      y: 350,
+      x: 0,
+      duration: .7,
+      ease: "power.inOut(1, 0.3)",
+      autoAlpha: 1,
+      scrub: true,
+      markers: true
+    });
+
+  }
+});
 
