@@ -4,10 +4,14 @@ Steve Mersereau | Richard Copestake
 ==================================================*/
 
 :root {
+    /*colors*/
     --blue: #3F51B5;
     --blue-hover: #0a67b2;
     --gold: #ccb404;
     --orange: #e09900;
+    /*font-sizes*/
+    --p-large: 1.3rem;
+    --p-large-mobile: 1.1rem;
 }
 
 * {
@@ -20,15 +24,19 @@ html, body {
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
     font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
-    font-size: 16px;
     color: #666;
     line-height: 1.7rem;
 }
-
+@media (max-width: 500px){
+    html {
+        font-size: 14px;
+    }
+}
 /*======= TYPOGRAPHIC STYLES & UTLITIES ========================*/
 
 .hidden {
@@ -329,10 +337,12 @@ section {
     margin: 0;
     padding: 0;
 }
-
-.slide-three-main, .slide-four-main, .slide-five-main {
+.slide{
     padding: 70px;
     height: 100vh;
+}
+.slide-three-main, .slide-four-main, .slide-five-main {
+/*nothing yet but might be need to target specific slides*/
 }
 .slide-three-main {
     background-color: antiquewhite;
@@ -366,8 +376,13 @@ section {
 }
 .home p{
     max-width: 60%;
-    font-size: 1.3rem;
+    font-size: var(--p-large);
     line-height: 1.6rem;
+}
+@media (max-width: 500px){
+    .home p{
+        font-size: var(--p-large-mobile);
+    }
 }
 .logo-img{
     margin-bottom: 3rem;
@@ -421,27 +436,72 @@ section {
     }
   }
 /*==== MAP OVRVIEW ===*/
-.map{
+section.map{
+    background: #F6BC4D;
+    
+}
+.map-container{
     margin-bottom: 50px;
-    background: #F6BC4D;  /* fallback for old browsers */
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
-    padding-top: 100px;
     text-align: center;
+}
+.map-item-container{
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 1000px;
 }
 .map h3{
  font-size: 2rem;
 }
 .map p{
     max-width: 60%;
-    font-size: 1.3rem;
+    font-size: var(--p-large);
     line-height: 1.6rem;
 }
+@media (max-width: 500px){
+    .map p{
+        font-size: var(--p-large-mobile);
+    }
+}
+.map-item{
+    padding: 15px 5px;
+    color: #fff;
+    text-align: center;
+    opacity: 0;
+    height: 50px;
+    width: 300px;
+    line-height: 1rem;
+    position: absolute;
+}
+
 .map-item-1{
-    padding: 30px;
     background-color: hotpink;
+}
+.map-item-2{
+    background-color: green;
+}
+.map-item-3{
+    background-color: rebeccapurple;
+}
+.map-item-4{
+    background-color: olive;
+}
+.map-item-5{
+    background-color: var(--blue);
+}
+.map-item-6{
+    background-color: indigo;
+}
+.map-item-7{
+    background-color: black;
+}
+.map-item-8{
+    background-color: teal;
 }
 
   /*=== FOOTER ===*/
