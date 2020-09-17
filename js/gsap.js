@@ -1,4 +1,16 @@
-//fix navbar to top once it reaches it
+
+// ==============MEDIA QUERY IF NEEDED =======================
+//hide on small screens maybe!
+ScrollTrigger.matchMedia({
+	
+  // desktop
+  "(min-width: 400px)": function() {  },
+})
+    // setup animations and ScrollTriggers for screens 400px wide or greater (desktop) here...
+    // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
+
+
+// ============== FIX NAVBAR TOP ON THIRD SLIDE ======================
 ScrollTrigger.create({
   trigger: ".nav-container",
   start: "top top", 
@@ -126,73 +138,60 @@ gsap.to(".map-item-8", {
 
 // ========== PROBLEMS & ACTIONS  ======================
 
-//hide on small screens maybe!
-ScrollTrigger.matchMedia({
-	
-  // desktop
-  "(min-width: 400px)": function() {
-    // setup animations and ScrollTriggers for screens 800px wide or greater (desktop) here...
-    // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
-    gsap.to("#problem-1", {
-      scrollTrigger: {
-        trigger: "#problem-1",
-        start: "top 50%",
-        end: "bottom 25%",
-        //markers: true,
-        toggleActions: "play pause resume reverse"
-      },
+// btn activated rather than scolltrigger
+
+    var tl = new TimelineLite({paused:true})
+    
+    $(".common-problems-btn").on("click", function() {
+      tl.play();
+    })
+
+    tl.to("#header-1", {
       opacity: 1,
-      duration: 1,
-      backgroundColor: "#FF0000"
+      duration: .5,
+    });
+
+    tl.to("#header-2", {
+      opacity: 1,
+      duration: .5,
+    });
+
+    tl.to("#problem-1", {
+      opacity: 1,
+      duration: .5,
     });
     
-    gsap.to("#action-1", {
-      scrollTrigger: {
-        trigger: "#action-1",
-        start: "top 50%",
-        end: "bottom 25%",
-        //markers: true,
-        toggleActions: "play pause resume reverse"
-      },
+    tl.to("#action-1",{
       opacity: 1,
-      duration: 1,
-      delay: .5, 
-      backgroundColor: "#FF0000",
-      
+      duration: .5,
+      delay: .1, 
 
     });
-    //end of problem action tweens
 
-    gsap.to("#problem-2", {
-      scrollTrigger: {
-        trigger: "#problem-2",
-        start: "top 50%",
-        end: "bottom 25%",
-        //markers: true,
-        toggleActions: "play pause resume reverse"
-      },
+    tl.to("#problem-2", {
       opacity: 1,
-      duration: 1,
-      backgroundColor: "#FF0000"
+      duration: .5,
+      delay: .2, 
     });
     
-    gsap.to("#action-2", {
-      scrollTrigger: {
-        trigger: "#action-2",
-        start: "top 50%",
-        end: "bottom 25%",
-        //markers: true,
-        toggleActions: "play pause resume reverse"
-      },
+    tl.to("#action-2",{
       opacity: 1,
-      duration: 1,
-      delay: .5, 
-      backgroundColor: "#FF0000",
-      
-
+      duration: .5,
+      delay: .3, 
     });
-  },
-})
+
+    tl.to("#problem-3", {
+      opacity: 1,
+      duration: .5,
+      delay: .3, 
+    });
+    
+    tl.to("#action-3",{
+      opacity: 1,
+      duration: .5,
+      delay: .4, 
+    });
+
 
 
 

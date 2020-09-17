@@ -11,6 +11,7 @@ Steve Mersereau | Richard Copestake
     --orange: #e09900;
     /*font-sizes*/
     --p-large: 1.3rem;
+    --p-medium: 1.1rem;
     --p-large-mobile: 1.1rem;
 }
 
@@ -107,6 +108,8 @@ section.home, section.footer{
 .slide{
     padding: 70px;
     position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /*===== MAIN NAVIGATION - Asylum Journey ==================*/
@@ -243,17 +246,45 @@ section.home, section.footer{
 
 
 .problem-container{
+    margin: 4rem auto 1rem auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 35% 1fr;
+    grid-gap: 1px;
+    font-size: var(--p-medium);
+    color: #fff;
 }
 @media (max-width: 400px){
     .problem-container{
         grid-template-columns: 1fr;
     }
 }
+.common-problems-btn{
+    background-color: var(--blue);
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    max-width: 300px;
+    color: white;
+    font-size: inherit;
+    transition: all .5s ease;
+    margin: 1rem 0;
+}
+.common-problems-btn:hover{
+    background-color: var(--blue-hover);
+}
+.problem-header, .action-header{
+    opacity: 0;
+    background-color: var(--blue);
+    color: #fff;
+    padding: 20px;
+}
+.problem, .action{
+    padding: 20px;
+}
  .problem{
     opacity: 0;
-    margin-bottom: 4rem;
+    background-color:#334295;
   }
   .problem-1{
       
@@ -261,7 +292,7 @@ section.home, section.footer{
 
   .action{
     opacity: 0;
-    margin-bottom: 4rem;
+    background-color: #334295;
   }
 .action-1{
 
@@ -327,28 +358,21 @@ section.home, section.footer{
 .slide-three-main {
     background-color: antiquewhite;
 }
-.slide-four-main {
-    background-color: aliceblue;
-}
-.slide-five-main {
-    background-color: bisque;
-}
+
 
 /*=== Home ===*/
 .home{
     margin-top: 0;
-    margin-bottom: 50px;
     background: #0f0c29;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-    position: relative;
     text-align: center;
     color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 .home h2{
     font-size: 2.5rem;
@@ -370,10 +394,10 @@ section.home, section.footer{
 
 
 /*=== animated scroll button ===*/
-#scroll-btn a {
+.scroll-btn a {
     padding-top: 70px;
   }
-  #scroll-btn a span {
+  .scroll-btn a span, .scroll-btn-2 a span {
     position: absolute;
     bottom: 100px;
     left: 50%;
@@ -388,6 +412,10 @@ section.home, section.footer{
     -webkit-animation: sdb05 1.5s infinite;
     animation: sdb05 1.5s infinite;
     box-sizing: border-box;
+  }
+  .scroll-btn-2 a span {
+    border-left: 2px solid var(--blue);
+    border-bottom: 2px solid var(--blue);
   }
   @-webkit-keyframes sdb05 {
     0% {
@@ -418,6 +446,7 @@ section.home, section.footer{
 /*==== MAP OVRVIEW ===*/
 section.map{
     background: #F6BC4D;
+    position: relative;
     
 }
 .map-container{
@@ -493,8 +522,20 @@ section.map{
 .map-item-8{
     background-color: teal;
 }
+/*=== SLIDE THREE - CLAIM ASYLUM ===*/
+section.slide-three{
+    background-color: khaki;
+}
+/*=== SLIDE FOUR - WELFARE INTERVIEW ===*/
+section.slide-four{
+    background-color: aliceblue;
+}
+/*=== SLIDE FIVE - LOCAL AUTHORITY CARE ===*/
+section.slide-five{
+    background-color: azure;
+}
 
-  /*=== FOOTER ===*/
+/*=== FOOTER ===*/
   footer{
       height: 100vh;
       background-color: #000;
