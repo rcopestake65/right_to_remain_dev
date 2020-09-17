@@ -15,14 +15,14 @@ ScrollTrigger.create({
 });
 
 //fix problem menus to top
-ScrollTrigger.create({
+/*ScrollTrigger.create({
   trigger: ".problem-container-one",
   start: "top 100px",
   endTrigger: ".slide-four-main",
   end: "top center",
   pin: ".problem-content-one",
   anticipatePin: 1, 
-  //markers: true,
+  markers: true,
   pinSpacing: false
 });
 
@@ -46,7 +46,7 @@ ScrollTrigger.create({
   anticipatePin: 1, 
  // markers: true,
   pinSpacing: false
-});
+});*/
 
 // ============================ MAP ITEMS ================================
 

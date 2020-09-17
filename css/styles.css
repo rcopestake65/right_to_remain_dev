@@ -85,9 +85,27 @@ p {
 
 /*===== LAYOUT ====================================*/
 
-.container {
-    width: 100%;
-    margin: 0 auto;
+/*height: 100vh; - doesn't work well on mobile if content overflows
+So apart from slides where the content is fixed and manageable - Home, Footer -
+the 100vh is restricted to screens above mobile site
+*/
+section{
+    margin: 0;
+    padding: 0;
+}
+@media (min-width: 300px){
+    section {
+        min-height: 100vh;
+    }
+    .slide{
+        min-height: 100vh;
+    }
+}
+section.home, section.footer{
+    min-height: 100vh;
+}
+.slide{
+    padding: 70px;
 }
 
 /*===== MAIN NAVIGATION - Asylum Journey ==================*/
@@ -132,10 +150,11 @@ p {
 
 .menu-open-btn:hover {
     opacity: .8;
+    cursor: pointer;
 }
 
 .nav-container {
-    /*position: fixed;*/
+    position: relative;
     width: 100%;
     top: 0;
     height: 50px;
@@ -225,9 +244,9 @@ p {
 
 .problems-open-btn {
     cursor: pointer;
-    position: absolute;
+   /* position: absolute;
     top: 10px;
-    right: 10px;
+    right: 10px;*/
     z-index: 2;
 }
 
@@ -252,9 +271,9 @@ p {
 }
 
 .problems-close-btn {
-    position: absolute;
+    /*position: absolute;
     top: 10px;
-    right: 10px;
+    right: 10px;*/
     cursor: pointer;
     color: #fff;
 }
@@ -288,21 +307,19 @@ p {
 /*=== Problems off-screen menu ===*/
 
 .problems-container {
-    display: block;
-    position: absolute;
+    display: none;
+    /*position: absolute;
     top: -35px;
-    right: 0;
+    right: 0;*/
     background: var(--blue);
     width: 100%;
     padding: 30px;
-    opacity: 0;
-    transition-property: opacity;
     transition: all .5s;
     z-index: 1;
 }
 
 .problems-container.show {
-    opacity: 1;
+   display: block;
     z-index: 2;
 }
 /*=== Action Cards ===*/
@@ -331,16 +348,7 @@ p {
 /*=========== PAGES ===========================================================*/
 
 /*=== general/site-wide ===*/
-section {
-    height: 100vh;
-    /*position: relative;*/
-    margin: 0;
-    padding: 0;
-}
-.slide{
-    padding: 70px;
-    height: 100vh;
-}
+
 
 .slide-three-main, .slide-four-main, .slide-five-main {
 /*nothing yet but might be need to target specific slides*/
@@ -529,10 +537,3 @@ section.map{
     padding: 60px 30px;
 }*/
 
-/*=== MEDIA QUERIES FOR HEIGHT ISSUE ON MOBILES ===*/
-@media (max-width: 700px){
-    .slide, footer,  .problems-container, section {
-        height: auto;
-    }
-    
-}
