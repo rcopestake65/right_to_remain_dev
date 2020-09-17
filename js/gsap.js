@@ -1,9 +1,3 @@
-function installMediaQueryWatcher(mediaQuery, layoutChangedCallback) {
-  var mql = window.matchMedia(mediaQuery);
-  mql.addListener(function (e) { return layoutChangedCallback(e.matches); });
-  layoutChangedCallback(mql.matches);
-}
-
 //fix navbar to top once it reaches it
 ScrollTrigger.create({
   trigger: ".nav-container",
@@ -14,266 +8,193 @@ ScrollTrigger.create({
   pinSpacing: false
 });
 
-//fix problem menus to top
-/*ScrollTrigger.create({
-  trigger: ".problem-container-one",
-  start: "top 100px",
-  endTrigger: ".slide-four-main",
-  end: "top center",
-  pin: ".problem-content-one",
-  anticipatePin: 1, 
-  markers: true,
-  pinSpacing: false
-});
 
-ScrollTrigger.create({
-  trigger: ".problem-container-two",
-  start: "top 100px",
-  endTrigger: ".slide-five-main",
-  end: "top center",
-  pin: ".problem-content-two",
-  anticipatePin: 1, 
- // markers: true,
-  pinSpacing: false
-});
-
-ScrollTrigger.create({
-  trigger: ".problem-container-three",
-  start: "top 100px",
-  endTrigger: "#footer",
-  end: "top center",
-  pin: ".problem-content-three",
-  anticipatePin: 1, 
- // markers: true,
-  pinSpacing: false
-});*/
 
 // ============================ MAP ITEMS ================================
-
-/*ScrollTrigger.create({
-  trigger: ".map",
-  start: "top 100px",
-  endTrigger: "#footer",
-  end: "top center",
-  pin: ".map-item-1",
-  anticipatePin: 1, 
-  markers: true,
-  pinSpacing: false
-});*/
-
-installMediaQueryWatcher("(min-width: 600px)", function(matches) {
-  if (matches) {
 
 gsap.to(".map-item-1", {
   scrollTrigger: {
     trigger: ".map-item-1",
-    //markers: true
+    start: "top 90%",
+    end: "bottom 25%",
 },
-  x: 0,
-  y: 0,
-  duration: .5,
+  duration: 1,
+  opacity: 1,
+  delay: .1,
   ease: "power.inOut(1, 0.3)",
   autoAlpha: 1,
-  
 });
 
 gsap.to(".map-item-2", {
   scrollTrigger: {
     trigger: ".map-item-2",
+    start: "top 87%",
+    end: "bottom 25%",
+   // markers: true
 },  
-  y: 50,
-  x: 70,
-  duration: .7,
+  opacity: 1,
+  duration: 1,
+  delay: .2,
   ease: "power.inOut(1, 0.3)",
   autoAlpha: 1,
-  scrub: true,
-  markers: true
 });
 
 gsap.to(".map-item-3", {
   scrollTrigger: {
     trigger: ".map-item-3",
+    start: "top 84%",
+    end: "bottom 25%",
+   // markers: true
 }, 
-  y: 100,
-  x: 140,
-  duration: .7,
+  opacity: 1, 
+  duration: 1,
+  delay: .3,
   ease: "power.inOut(1, 0.3)",
   autoAlpha: 1,
-  scrub: true,
-  markers: true
 });
 
 gsap.to(".map-item-4", {
   scrollTrigger: {
     trigger: ".map-item-4",
+    start: "top 81%",
+    end: "bottom 25%",
+    //markers: true
 }, 
-  y: 150,
-  x: 210,
-  duration: .7,
+  opacity: 1,
+  duration: 1,
+  delay: .4,
   ease: "power.inOut(1, 0.3)",
   autoAlpha: 1,
-  scrub: true,
-  markers: true
 });
 
 gsap.to(".map-item-5", {
   scrollTrigger: {
     trigger: ".map-item-5",
+    start: "top 78%",
+    end: "bottom 25%",
+    //markers: true
 }, 
-  y: 200,
-  x: 280,
-  duration: .7,
+  opacity: 1,
+  duration: 1,
+  delay: .5,
   ease: "power.inOut(1, 0.3)",
   autoAlpha: 1,
-  scrub: true,
-  markers: true
 });
 
 gsap.to(".map-item-6", {
   scrollTrigger: {
     trigger: ".map-item-6",
+    start: "top 75%",
+    end: "bottom 25%",
+    //markers: true
 }, 
-  y: 250,
-  x: 350,
-  duration: .7,
+  opacity: 1,
+  duration: 1,
+  delay: .6,
   ease: "power.inOut(1, 0.3)",
   autoAlpha: 1,
-  scrub: true,
-  markers: true
 });
 
 gsap.to(".map-item-7", {
   scrollTrigger: {
     trigger: ".map-item-7",
+    start: "top 75%",
+    end: "bottom 25%",
+    //markers: true
 }, 
-  y: 300,
-  x: 420,
-  duration: .7,
+  opacity: 1,
+  duration: 1,
+  delay: .7,
   ease: "power.inOut(1, 0.3)",
   autoAlpha: 1,
-  scrub: true,
-  markers: true
 });
 
 gsap.to(".map-item-8", {
   scrollTrigger: {
     trigger: ".map-item-8",
+    start: "top 75%",
+    end: "bottom 25%",
+    //markers: true
 }, 
-  y: 350,
-  x: 490,
-  duration: .7,
+  opacity: 1,
+  duration: 1,
+  delay: .8,
   ease: "power.inOut(1, 0.3)",
   autoAlpha: 1,
-  scrub: true,
-  markers: true
 });
 
-  } else {
 
-    gsap.to(".map-item-1", {
+// ========== PROBLEMS & ACTIONS  ======================
+
+//hide on small screens maybe!
+ScrollTrigger.matchMedia({
+	
+  // desktop
+  "(min-width: 400px)": function() {
+    // setup animations and ScrollTriggers for screens 800px wide or greater (desktop) here...
+    // These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
+    gsap.to("#problem-1", {
       scrollTrigger: {
-        trigger: ".map-item-1",
-        //markers: true
-    },
-      x: 0,
-      y: 0,
-      duration: .5,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
+        trigger: "#problem-1",
+        start: "top 50%",
+        end: "bottom 25%",
+        //markers: true,
+        toggleActions: "play pause resume reverse"
+      },
+      opacity: 1,
+      duration: 1,
+      backgroundColor: "#FF0000"
+    });
+    
+    gsap.to("#action-1", {
+      scrollTrigger: {
+        trigger: "#action-1",
+        start: "top 50%",
+        end: "bottom 25%",
+        //markers: true,
+        toggleActions: "play pause resume reverse"
+      },
+      opacity: 1,
+      duration: 1,
+      delay: .5, 
+      backgroundColor: "#FF0000",
       
-    });
-    
-    gsap.to(".map-item-2", {
-      scrollTrigger: {
-        trigger: ".map-item-2",
-    },  
-      y: 50,
-      x: 0,
-      duration: .7,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
-      scrub: true,
-      markers: true
-    });
-    
-    gsap.to(".map-item-3", {
-      scrollTrigger: {
-        trigger: ".map-item-3",
-    }, 
-      y: 100,
-      x: 0,
-      duration: .7,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
-      scrub: true,
-      markers: true
-    });
-    
-    gsap.to(".map-item-4", {
-      scrollTrigger: {
-        trigger: ".map-item-4",
-    }, 
-      y: 150,
-      x: 0,
-      duration: .7,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
-      scrub: true,
-      markers: true
-    });
-    
-    gsap.to(".map-item-5", {
-      scrollTrigger: {
-        trigger: ".map-item-5",
-    }, 
-      y: 200,
-      x: 0,
-      duration: .7,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
-      scrub: true,
-      markers: true
-    });
-    
-    gsap.to(".map-item-6", {
-      scrollTrigger: {
-        trigger: ".map-item-6",
-    }, 
-      y: 250,
-      x: 0,
-      duration: .7,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
-      scrub: true,
-      markers: true
-    });
-    
-    gsap.to(".map-item-7", {
-      scrollTrigger: {
-        trigger: ".map-item-7",
-    }, 
-      y: 300,
-      x: 0,
-      duration: .7,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
-      scrub: true,
-      markers: true
-    });
-    
-    gsap.to(".map-item-8", {
-      scrollTrigger: {
-        trigger: ".map-item-8",
-    }, 
-      y: 350,
-      x: 0,
-      duration: .7,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
-      scrub: true,
-      markers: true
-    });
 
-  }
-});
+    });
+    //end of problem action tweens
+
+    gsap.to("#problem-2", {
+      scrollTrigger: {
+        trigger: "#problem-2",
+        start: "top 50%",
+        end: "bottom 25%",
+        //markers: true,
+        toggleActions: "play pause resume reverse"
+      },
+      opacity: 1,
+      duration: 1,
+      backgroundColor: "#FF0000"
+    });
+    
+    gsap.to("#action-2", {
+      scrollTrigger: {
+        trigger: "#action-2",
+        start: "top 50%",
+        end: "bottom 25%",
+        //markers: true,
+        toggleActions: "play pause resume reverse"
+      },
+      opacity: 1,
+      duration: 1,
+      delay: .5, 
+      backgroundColor: "#FF0000",
+      
+
+    });
+  },
+})
+
+
+
+
 
