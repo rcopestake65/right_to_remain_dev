@@ -3,11 +3,10 @@
 //open
 document.querySelector('.menu-open-btn').addEventListener('click', () => document.querySelector('.main-menu-container').classList.toggle('show'));
 //close
-document.querySelector('.menu-close-btn').addEventListener('click', () => document.querySelector('.main-menu-container').classList.toggle('show'));
+document.querySelector('.menu-close-btn').addEventListener('click', () => document.querySelector('.main-menu-container').classList.remove('show'));
 
-//close problems menus if open - this needs tidying
-document.querySelector('.menu-open-btn').addEventListener('click', () => document.querySelector('.problems-container-1').classList.remove('show'));
-document.querySelector('.menu-open-btn').addEventListener('click', () => document.querySelector('.problems-container-2').classList.remove('show')); 
+//close main-menu if problems btn clicked
+document.querySelector('.common-problems-btn').addEventListener('click', () => document.querySelector('.main-menu-container').classList.remove('show'));
 
 
 
