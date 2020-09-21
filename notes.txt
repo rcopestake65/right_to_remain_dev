@@ -1,9 +1,9 @@
 
-look at using accordion for problems actions - take from core reflections
-add small movements to opacity transitions - see more about changing css with gsap
+
+
 background image animations
 playing card idea for start cards - using childrens designs
-replace hamburger iconschange fly in main menu to full page with map and page 'active' highlights
-add title of section into main nav white bar?
+ page 'active' highlights for menu?
+
 
 find a colour scheme
