@@ -346,7 +346,7 @@ section.slide-one {
 
 section.slide-two {
     background-color: rgb(15, 12, 41);
-    background-image: url(/images/walking-man.png), linear-gradient(90deg, rgba(15, 12, 41, 1) 30%, rgba(48, 43, 99, 1) 52%, rgba(15, 12, 41, 1) 70%);
+    background-image: url("https://rcopestake65.github.io/right_to_remain_dev/images/walking-man.png"), linear-gradient(90deg, rgba(15, 12, 41, 1) 30%, rgba(48, 43, 99, 1) 52%, rgba(15, 12, 41, 1) 70%);
     background-repeat: no-repeat;
     background-position: 10% center;
     position: relative;
@@ -428,7 +428,7 @@ section.slide-two {
 
 section.slide-three {
     background: rgb(99, 156, 198);
-    background-image: url(/images/claim-asylum-02.png), linear-gradient(90deg, rgba(99, 156, 198, 1) 30%, rgba(128, 177, 213, 1) 52%, rgba(99, 156, 198, 1) 70%);
+    background-image: url("https://rcopestake65.github.io/right_to_remain_dev/images/claim-asylum-02.png"), linear-gradient(90deg, rgba(99, 156, 198, 1) 30%, rgba(128, 177, 213, 1) 52%, rgba(99, 156, 198, 1) 70%);
     background-repeat: no-repeat;
     background-position: top right;
     position: relative;
