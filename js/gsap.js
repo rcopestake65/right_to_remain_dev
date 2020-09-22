@@ -421,7 +421,7 @@ gsap.to(".more-btn", {
 //=========== STAR CARDS ==================
 
 //all cards hidden
-gsap.set([".card-1", ".card-2"], {opacity: 0, scaleX: 0, scaleY: 0 });
+gsap.set([".card-1", ".card-2"], {opacity: 0, scaleX: 0, scaleY: 0, display: "none" });
 
 
 
@@ -432,10 +432,10 @@ $(".card-1-btn").on("click", function () {
   tlcards1.play();
 });
 
-tlcards1.call(function () {
-  $('.card-1').addClass("card-show");
+//tlcards1.call(function () {
+  //$('.card-1').addClass(".card-show");
 
-});
+//});
 
 
   tlcards1.to('.card-1',{
@@ -443,7 +443,8 @@ tlcards1.call(function () {
     scaleY: "100%", 
     transformOrigin:"center center",
     opacity: 1,
-    duration: .5
+    duration: .5,
+    display: "block"
   });
 
   /*close card-1*/  
