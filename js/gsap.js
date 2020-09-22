@@ -420,7 +420,7 @@ gsap.to(".more-btn", {
 
 //=========== STAR CARDS ==================
 
-/*all cards hidden*/
+//all cards hidden
 gsap.set([".card-1", ".card-2"], {opacity: 0, scaleX: 0, scaleY: 0 });
 
 
