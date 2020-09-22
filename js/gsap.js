@@ -34,7 +34,13 @@ gsap.to(".intro-one", { duration: 2, x: 0, y: 0, opacity: 1, delay: .5 });
 gsap.set(".next-btn-container", { y: 50, opacity: 0 });
 gsap.to(".next-btn-container", { duration: 2, x: 0, y: 0, opacity: 1, delay: .7 });
 
-
+//more btn    
+gsap.to(".more-btn", {
+  opacity: 1,
+  duration: 1,
+  repeat: -1,
+  yoyo: true
+})
 
 //=============== SLIDE TWO | MAP ======================
 gsap.set(".title-two", { opacity: 0, y: -50 });
@@ -316,7 +322,7 @@ ScrollTrigger.matchMedia({
 
     $(".menu-open-btn").on("click", function () {
       tl2.restart();
-    })
+    });
 
     tl2.to(".nav-item-container", {
       opacity: 1,
@@ -331,7 +337,7 @@ ScrollTrigger.matchMedia({
 
     $(".menu-close-btn").on("click", function () {
       tl3.restart();
-    })
+    });
 
     tl3.to(".nav-item-container", {
       opacity: 1,
@@ -348,7 +354,7 @@ ScrollTrigger.matchMedia({
 
     $(".stage-btn").on("click", function () {
       tl4.restart();
-    })
+    });
 
     tl4.to(".nav-item-container", {
       opacity: 1,
@@ -359,32 +365,42 @@ ScrollTrigger.matchMedia({
       autoAlpha: 1,
     });
   },
-})
+});
 
 $(".nav-item").hover(navOver, navOut);
 
 function navOver(){
-  gsap.to(this, 0.2, {y: -5, backgroundColor: "#1f1b45"})
+  gsap.to(this, 0.2, {y: -5, backgroundColor: "#1f1b45"});
   
-}
+};
 
 function navOut(){
-  gsap.to(this, 0.2, {y: 0, backgroundColor: "#FA9A06"})
+  gsap.to(this, 0.2, {y: 0, backgroundColor: "#FA9A06"});
  
-}
+};
 // ========== PROBLEMS & ACTIONS  ======================
 
 // btn activated rather than scolltrigger
 
-var tl = new gsap.timeline({ paused: true })
+gsap.set([".accordion-grid"], {opacity: 0, display: "none" });
+
+//var probs = ([".accordion-header-1", ".accordion-header-2", ".accordion-header-3", ".accordion-header-4"]);
+
+var tl = new gsap.timeline({ paused: true });
 
 $(".common-problems-btn").on("click", function () {
   tl.play();
-})
+});
 
-tl.call(function () {
-  $('.accordion-grid').addClass("accordion-grid-show");
+//tl.call(function () {
+  //$('.accordion-grid').addClass("accordion-grid-show");
 
+//});
+
+tl.to(".accordion-grid",{
+  display: "block",
+  opacity: 1,
+  duration: .5
 });
 
 tl.to(".accordion-header-1", {
@@ -405,18 +421,11 @@ tl.to(".accordion-header-3", {
 tl.to(".accordion-header-4", {
   opacity: 1,
   duration: .5,
-  delay: .1,
-
 });
 
 
-//more btn    
-gsap.to(".more-btn", {
-  opacity: 1,
-  duration: 1,
-  repeat: -1,
-  yoyo: true
-})
+
+
 
 //=========== STAR CARDS ==================
 
@@ -439,8 +448,8 @@ $(".card-1-btn").on("click", function () {
 
 
   tlcards1.to('.card-1',{
-    scaleX: "100%",
-    scaleY: "100%", 
+    scaleX: 1,
+    scaleY: 1, 
     transformOrigin:"center center",
     opacity: 1,
     duration: .5,

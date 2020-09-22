@@ -456,13 +456,9 @@ section.slide-three {
 }
 
 .accordion-grid {
-    display: none;
-}
-
-.accordion-grid-show {
-    display: grid;
     grid-template-columns: 1fr;
 }
+
 
 .accordion-header {
     padding: 1.5em 1.5em;
@@ -677,10 +673,10 @@ section.slide-eleven {
     text-align: left;
 }
 
-.card-show {
+/*.card-show {
     display: block;
     min-height: 100%;
-}
+}*/
 
 .card-close-btn {
     position: absolute;
