@@ -27,6 +27,8 @@ ScrollTrigger.matchMedia({
   },
 })
 
+gsap.set(".illustrations", { x: 150, opacity: 0 });
+gsap.to(".illustrations", { duration: 2, x: 0, y: 0, opacity: 1, delay: 1.1 });
 
 gsap.set(".intro-one", { y: 50, opacity: 0 });
 gsap.to(".intro-one", { duration: 2, x: 0, y: 0, opacity: 1, delay: .5 });
@@ -246,14 +248,16 @@ function starOut(){
 
 
 // ============== FIX NAVBAR TOP ON THIRD SLIDE ======================
-ScrollTrigger.create({
+
+/*ScrollTrigger.create({
   trigger: ".nav-container",
   start: "top top",
   end: "+=5000",
   pin: ".main-nav",
   //markers: true,
   pinSpacing: false
-});
+});*/
+
 
 //=== MAIN NAV CONTENTS ===
 
@@ -382,9 +386,16 @@ function navOut(){
 
 // btn activated rather than scolltrigger
 
-gsap.set([".accordion-grid"], {opacity: 0, display: "none" });
+gsap.set(
+  [
+ ".accordion-grid",
+ ".accordion-header-1",
+ ".accordion-header-2",
+ ".accordion-header-3",
+ ".accordion-header-4",
+], {opacity: 0, display: "none" });
 
-//var probs = ([".accordion-header-1", ".accordion-header-2", ".accordion-header-3", ".accordion-header-4"]);
+
 
 var tl = new gsap.timeline({ paused: true });
 
@@ -392,10 +403,6 @@ $(".common-problems-btn").on("click", function () {
   tl.play();
 });
 
-//tl.call(function () {
-  //$('.accordion-grid').addClass("accordion-grid-show");
-
-//});
 
 tl.to(".accordion-grid",{
   display: "block",
@@ -404,21 +411,25 @@ tl.to(".accordion-grid",{
 });
 
 tl.to(".accordion-header-1", {
+  display: "block",
   opacity: 1,
   duration: .5,
 });
 
 tl.to(".accordion-header-2", {
+  display: "block",
   opacity: 1,
   duration: .5,
 });
 
 tl.to(".accordion-header-3", {
+  display: "block",
   opacity: 1,
   duration: .5,
 });
 
 tl.to(".accordion-header-4", {
+  display: "block",
   opacity: 1,
   duration: .5,
 });
@@ -440,11 +451,6 @@ var tlcards1 = new gsap.timeline({ paused: true });
 $(".card-1-btn").on("click", function () {
   tlcards1.play();
 });
-
-//tlcards1.call(function () {
-  //$('.card-1').addClass(".card-show");
-
-//});
 
 
   tlcards1.to('.card-1',{
@@ -470,18 +476,14 @@ $(".card-2-btn").on("click", function () {
   tlcards2.play();
 });
 
-tlcards2.call(function () {
-  $('.card-2').addClass("card-show");
-
-});
-
 
   tlcards2.to('.card-2',{
-    scaleX: "100%",
-    scaleY: "100%", 
+    scaleX: 1,
+    scaleY: 1, 
     transformOrigin:"center center",
     opacity: 1,
-    duration: .5
+    duration: .5,
+    display: "block"
   });
 
   var tlcardsClose2 = new gsap.timeline({ paused: true });

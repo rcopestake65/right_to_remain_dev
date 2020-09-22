@@ -12,6 +12,7 @@ Steve Mersereau | Richard Copestake
     /*font-sizes*/
     --p-large: 1.3rem;
     --p-medium: 1.1rem;
+    --p-small: 1rem;
     --p-large-mobile: 1.1rem;
 }
 
@@ -100,7 +101,7 @@ p {
 
 /*height: 100vh; - doesn't work well on mobile if content overflows
 So apart from slides where the content is fixed and manageable - Home, Footer -
-the 100vh is restricted to screens above mobile site
+the 100vh is restricted to screens above mobile size
 */
 
 section {
@@ -134,18 +135,14 @@ section.slide-one, section.footer {
 /*=== open & close btns ===*/
 
 .menu-open-btn {
-    display: none;
+    display: block;
+    color: var(--blue);
     transition: all ease .5s;
+    padding: 5px 0 0 5px;
 }
 
 .menu-close-btn {
     display: none;
-}
-
-.menu-open-btn {
-    display: block;
-    margin: 10px 0 0 10px;
-    color: var(--blue);
 }
 
 .menu-close-btn {
@@ -162,7 +159,7 @@ section.slide-one, section.footer {
     z-index: 12;
 }
 
-.fa-bars::before {
+/*.fa-bars::before {
     color: var(--blue);
     transition: .3s;
 }
@@ -170,25 +167,24 @@ section.slide-one, section.footer {
 .fa-bars:hover::before {
     color: var(--gold);
 }
-
+*/
 .menu-open-btn:hover {
-    color: var(--gold);
     cursor: pointer;
+}
+.main-nav-sticky-container {
+    height: auto;
 }
 
 .nav-container {
-    position: relative;
-    width: 100%;
+    position: -webkit-sticky;
+    position: sticky;
     top: 0;
-    height: 50px;
     z-index: 2;
     margin: 0;
     padding: 0;
 }
-
 .main-nav {
-    background-color: #fff;
-    padding: 5px 0 10px 0;
+    background-color: rgba(255, 255, 255, 0.5);
 }
 
 .main-nav .main-menu-container {
@@ -316,6 +312,16 @@ section.slide-one {
 .slide-one a:hover {
     color: var(--blue-hover);
 }
+/*-- illustration --*/
+.illustrations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.illustrations p{
+    font-family: 'Amatic SC', cursive;
+}
 
 @media (max-width: 500px) {
     .slide-one p {
@@ -339,8 +345,10 @@ section.slide-one {
 /*==== SLIDE-TWO | 'MAP' ===*/
 
 section.slide-two {
-    background: rgb(15, 12, 41);
-    background: linear-gradient(90deg, rgba(15, 12, 41, 1) 30%, rgba(48, 43, 99, 1) 52%, rgba(15, 12, 41, 1) 70%);
+    background-color: rgb(15, 12, 41);
+    background-image: url(/images/walking-man.png), linear-gradient(90deg, rgba(15, 12, 41, 1) 30%, rgba(48, 43, 99, 1) 52%, rgba(15, 12, 41, 1) 70%);
+    background-repeat: no-repeat;
+    background-position: 10% center;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -350,7 +358,18 @@ section.slide-two {
     justify-content: space-evenly;
     padding: 3rem 0;
 }
-
+@media (max-width: 1000px){
+    section.slide-two {
+        background-color: rgb(15, 12, 41);
+        background-position: left center;
+    }
+}
+@media (max-width: 800px){
+    section.slide-two {
+        background-color: rgb(15, 12, 41);
+        background-image: none;
+    }
+}
 .slide-two h3 {
     font-size: 2rem;
 }
@@ -409,7 +428,9 @@ section.slide-two {
 
 section.slide-three {
     background: rgb(99, 156, 198);
-    background: linear-gradient(90deg, rgba(99, 156, 198, 1) 30%, rgba(128, 177, 213, 1) 52%, rgba(99, 156, 198, 1) 70%);
+    background-image: url(/images/claim-asylum-02.png), linear-gradient(90deg, rgba(99, 156, 198, 1) 30%, rgba(128, 177, 213, 1) 52%, rgba(99, 156, 198, 1) 70%);
+    background-repeat: no-repeat;
+    background-position: top right;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -471,10 +492,10 @@ section.slide-three {
     opacity: 0;
     border-bottom: 1px dashed #C0C8F8;
 }
-
+/*
 .accordion-header-1, .accordion-header-2, .accordion-header-3, .accordion-header-4 {
     opacity: 0;
-}
+}*/
 
 .accordion__item .accordion__item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
