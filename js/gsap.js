@@ -384,55 +384,66 @@ function navOut(){
 };
 // ========== PROBLEMS & ACTIONS  ======================
 
-// btn activated rather than scolltrigger
-
 gsap.set(
   [
- ".accordion-grid",
- ".accordion-header-1",
- ".accordion-header-2",
- ".accordion-header-3",
- ".accordion-header-4",
-], {opacity: 0, display: "none" });
+ ".accordion-grid-1",
+ ".accordion-grid-2"
+], {opacity: 0, display: "none", scaleX: 0, scaleY: 0 });
 
 
+/* first accordion */
+var tlAcc1 = new gsap.timeline({ paused: true });
+forward = true;
 
-var tl = new gsap.timeline({ paused: true });
-
-$(".common-problems-btn").on("click", function () {
-  tl.play();
+$(".gsap-btn-1").on("click", function () {
+  if(!forward)
+  {
+    tlAcc1.reverse();
+  }
+  else
+  {
+    tlAcc1.play();
+  }
+  //this toggles the boolean on each click event
+  forward = forward  ? false : true;
 });
 
 
-tl.to(".accordion-grid",{
+tlAcc1.to(".accordion-grid-1",{
   display: "block",
   opacity: 1,
-  duration: .5
+  duration: 1,
+  scaleY: 1,
+  scaleX: 1
 });
 
-tl.to(".accordion-header-1", {
-  display: "block",
-  opacity: 1,
-  duration: .5,
+/* second accordion */
+
+var tlAcc2 = new gsap.timeline({ paused: true });
+forward = true;
+
+$(".gsap-btn-2").on("click", function () {
+  if(!forward)
+  {
+    tlAcc2.reverse();
+  }
+  else
+  {
+    tlAcc2.play();
+  }
+  //this toggles the boolean on each click event
+  forward = forward  ? false : true;
 });
 
-tl.to(".accordion-header-2", {
+
+tlAcc2.to(".accordion-grid-2",{
   display: "block",
   opacity: 1,
-  duration: .5,
+  duration: 1,
+  scaleY: 1,
+  scaleX: 1
 });
 
-tl.to(".accordion-header-3", {
-  display: "block",
-  opacity: 1,
-  duration: .5,
-});
-
-tl.to(".accordion-header-4", {
-  display: "block",
-  opacity: 1,
-  duration: .5,
-});
 
 
 
