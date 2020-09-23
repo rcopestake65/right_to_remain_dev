@@ -1,15 +1,6 @@
 
-// ==============MEDIA QUERY IF NEEDED =======================
-//hide on small screens maybe!
-ScrollTrigger.matchMedia({
-
-  // desktop
-  "(min-width: 400px)": function () { },
-})
-// setup animations and ScrollTriggers for screens 400px wide or greater (desktop) here...
-// These ScrollTriggers will be reverted/killed when the media query doesn't match anymore.
-
 // ============ HOME PAGE ===================
+
 
 
 gsap.set(".logo-img", { opacity: 0, y: -50 });
@@ -18,14 +9,8 @@ gsap.to(".logo-img", { duration: 2, x: 0, y: 0, opacity: 1 });
 gsap.set(".title-one", { opacity: 0, y: -50 });
 gsap.to(".title-one", { duration: 2, x: 0, y: 0, opacity: 1, delay: .3 });
 
-ScrollTrigger.matchMedia({
-
-  // desktop
-  "(min-width: 900px)": function () {
-    gsap.set(".underline", { width: 0 })
-    gsap.to(".underline", { width: "45%", delay: 1.3, duration: 1 })
-  },
-})
+gsap.set(".underline", { width: 0 });
+gsap.to(".underline", { width: "45%", delay: 1.3, duration: 1 });
 
 gsap.set(".illustrations", { x: 150, opacity: 0 });
 gsap.to(".illustrations", { duration: 2, x: 0, y: 0, opacity: 1, delay: 1.1 });
@@ -36,6 +21,8 @@ gsap.to(".intro-one", { duration: 2, x: 0, y: 0, opacity: 1, delay: .5 });
 gsap.set(".next-btn-container", { y: 50, opacity: 0 });
 gsap.to(".next-btn-container", { duration: 2, x: 0, y: 0, opacity: 1, delay: .7 });
 
+
+
 //more btn    
 gsap.to(".more-btn", {
   opacity: 1,
@@ -44,32 +31,18 @@ gsap.to(".more-btn", {
   yoyo: true
 })
 
-//=============== SLIDE TWO | MAP ======================
+//=============== SLIDE TWO | MAP =====================================================================
 gsap.set(".title-two", { opacity: 0, y: -50 });
-gsap.to(".title-two",
-  {
-    scrollTrigger: {
-      trigger: ".title-two",
-      start: "top 90%",
-      end: "bottom bottom",
-    },
+gsap.to(".title-two",{
     duration: 2,
     x: 0,
     y: 0,
     opacity: 1,
     delay: .3
-
   });
-
-
 
   gsap.set(".star-card", { x: 50, opacity: 0 });
   gsap.to(".star-card", {
-    scrollTrigger: {
-      trigger: ".title-two",
-      start: "top 90%",
-      end: "bottom bottom",
-    },
     duration: 2,
     x: 0,
     y: 0,
@@ -77,36 +50,11 @@ gsap.to(".title-two",
     delay: .3
 
   });
-
-
-//try to use stagger or an array
-/*
-var list = [".map-item-1",".map-item-2", ".map-item-3"]
-var tn1 = new TweenMax.staggerFrom(list, 1,{
-  scrollTrigger: {
-    trigger: ".map-item-1",
-    start: "top 90%",
-    end: "bottom 25%",
-  },
-  duration: 1,
-  x: -40,
-  opacity: 0,
-  ease: "power.inOut(1, 0.3)",
-  autoAlpha: 1,
-});
-*/
 
 gsap.set([".map-item-1", ".map-item-3", ".map-item-5", ".map-item-7"], { x: -40, opacity: 0 });
 gsap.set([".map-item-2", ".map-item-4", ".map-item-6", ".map-item-8"], { x: 40, opacity: 0 });
 
-
-
 gsap.to(".map-item-1", {
-  scrollTrigger: {
-    trigger: ".map-item-1",
-    start: "top 90%",
-    end: "bottom 25%",
-  },
   duration: 1,
   x: 0,
   opacity: 1,
@@ -116,12 +64,6 @@ gsap.to(".map-item-1", {
 });
 
 gsap.to(".map-item-2", {
-  scrollTrigger: {
-    trigger: ".map-item-2",
-    start: "top 87%",
-    end: "bottom 25%",
-    // markers: true
-  },
   opacity: 1,
   duration: 1,
   x: 0,
@@ -131,12 +73,6 @@ gsap.to(".map-item-2", {
 });
 
 gsap.to(".map-item-3", {
-  scrollTrigger: {
-    trigger: ".map-item-3",
-    start: "top 84%",
-    end: "bottom 25%",
-    // markers: true
-  },
   opacity: 1,
   duration: 1,
   x: 0,
@@ -146,12 +82,6 @@ gsap.to(".map-item-3", {
 });
 
 gsap.to(".map-item-4", {
-  scrollTrigger: {
-    trigger: ".map-item-4",
-    start: "top 81%",
-    end: "bottom 25%",
-    //markers: true
-  },
   opacity: 1,
   duration: 1,
   x: 0,
@@ -161,12 +91,6 @@ gsap.to(".map-item-4", {
 });
 
 gsap.to(".map-item-5", {
-  scrollTrigger: {
-    trigger: ".map-item-5",
-    start: "top 78%",
-    end: "bottom 25%",
-    //markers: true
-  },
   opacity: 1,
   duration: 1,
   x: 0,
@@ -176,12 +100,6 @@ gsap.to(".map-item-5", {
 });
 
 gsap.to(".map-item-6", {
-  scrollTrigger: {
-    trigger: ".map-item-6",
-    start: "top 75%",
-    end: "bottom 25%",
-    //markers: true
-  },
   opacity: 1,
   duration: 1,
   x: 0,
@@ -191,12 +109,6 @@ gsap.to(".map-item-6", {
 });
 
 gsap.to(".map-item-7", {
-  scrollTrigger: {
-    trigger: ".map-item-7",
-    start: "top 75%",
-    end: "bottom 25%",
-    //markers: true
-  },
   opacity: 1,
   duration: 1,
   x: 0,
@@ -206,12 +118,6 @@ gsap.to(".map-item-7", {
 });
 
 gsap.to(".map-item-8", {
-  scrollTrigger: {
-    trigger: ".map-item-8",
-    start: "top 85%",
-    end: "bottom 25%",
-    //markers: true
-  },
   opacity: 1,
   duration: 1,
   x: 0,
@@ -246,25 +152,7 @@ function starOut(){
  
 }
 
-
-// ============== FIX NAVBAR TOP ON THIRD SLIDE ======================
-
-/*ScrollTrigger.create({
-  trigger: ".nav-container",
-  start: "top top",
-  end: "+=5000",
-  pin: ".main-nav",
-  //markers: true,
-  pinSpacing: false
-});*/
-
-
 //=== MAIN NAV CONTENTS ===
-
-ScrollTrigger.matchMedia({
-
-  // desktop only
-  "(min-width: 700px)": function () {
 
     var tl2 = new gsap.timeline({ paused: true })
 
@@ -275,7 +163,7 @@ ScrollTrigger.matchMedia({
     tl2.to(".nav-item-container", {
       opacity: 1,
       duration: 1,
-      x: 150,
+      x: 70,
       delay: .1,
       ease: "power.inOut(1, 0.3)",
       autoAlpha: 1,
@@ -296,8 +184,6 @@ ScrollTrigger.matchMedia({
       autoAlpha: 1,
     });
 
-
-
     var tl4 = new gsap.timeline({ paused: true })
 
     $(".stage-btn").on("click", function () {
@@ -312,130 +198,39 @@ ScrollTrigger.matchMedia({
       ease: "power.inOut(1, 0.3)",
       autoAlpha: 1,
     });
-  },
-})
-
-
-//same as above for smaller screens
-ScrollTrigger.matchMedia({
-
-  // desktop only
-  "(max-width: 500px)": function () {
-
-    var tl2 = new gsap.timeline({ paused: true })
-
-    $(".menu-open-btn").on("click", function () {
-      tl2.restart();
-    });
-
-    tl2.to(".nav-item-container", {
-      opacity: 1,
-      duration: 1,
-      x: 20,
-      delay: .1,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
-    });
-
-    var tl3 = new gsap.timeline({ paused: true })
-
-    $(".menu-close-btn").on("click", function () {
-      tl3.restart();
-    });
-
-    tl3.to(".nav-item-container", {
-      opacity: 1,
-      duration: 1,
-      x: -50,
-      delay: .1,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
-    });
 
 
 
-    var tl4 = new gsap.timeline({ paused: true })
-
-    $(".stage-btn").on("click", function () {
-      tl4.restart();
-    });
-
-    tl4.to(".nav-item-container", {
-      opacity: 1,
-      duration: 1,
-      x: -100,
-      delay: .1,
-      ease: "power.inOut(1, 0.3)",
-      autoAlpha: 1,
-    });
-  },
-});
-
-$(".nav-item").hover(navOver, navOut);
-
-function navOver(){
-  gsap.to(this, 0.2, {y: -5, backgroundColor: "#1f1b45"});
-  
-};
-
-function navOut(){
-  gsap.to(this, 0.2, {y: 0, backgroundColor: "#FA9A06"});
- 
-};
 // ========== PROBLEMS & ACTIONS  ======================
 
-// btn activated rather than scolltrigger
-
-gsap.set(
-  [
- ".accordion-grid",
- ".accordion-header-1",
- ".accordion-header-2",
- ".accordion-header-3",
- ".accordion-header-4",
-], {opacity: 0, display: "none" });
+// hide all accordions in the array 
+gsap.set(".accordion-grid", {opacity: 0, display: "none", scaleX: 0, scaleY: 0 });
 
 
-
-var tl = new gsap.timeline({ paused: true });
-
-$(".common-problems-btn").on("click", function () {
-  tl.play();
-});
+// all variables for all accordions 
+var tlAcc = new gsap.timeline({ paused: true });
 
 
-tl.to(".accordion-grid",{
+var div = $(".accordion-grid");
+var btn = $(".gsap-btn"),
+
+
+tlAcc = gsap.to(div,{
   display: "block",
   opacity: 1,
-  duration: .5
-});
+  duration: 1,
+  scaleY: 1,
+  scaleX: 1,
+  ease:Back.easeOut
+    }).reversed(true);
 
-tl.to(".accordion-header-1", {
-  display: "block",
-  opacity: 1,
-  duration: .5,
-});
-
-tl.to(".accordion-header-2", {
-  display: "block",
-  opacity: 1,
-  duration: .5,
-});
-
-tl.to(".accordion-header-3", {
-  display: "block",
-  opacity: 1,
-  duration: .5,
-});
-
-tl.to(".accordion-header-4", {
-  display: "block",
-  opacity: 1,
-  duration: .5,
-});
-
-
-
+    function toggleDirection1() {
+      tlAcc.reversed( !tlAcc.reversed() );
+    }
+    
+    btn.click(function(){
+      toggleDirection1();
+    });
 
 
 //=========== STAR CARDS ==================

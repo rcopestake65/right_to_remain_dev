@@ -113,9 +113,6 @@ section {
     section {
         min-height: 100vh;
     }
-    .slide {
-        min-height: 100vh;
-    }
 }
 
 section.slide-one, section.footer {
@@ -272,6 +269,27 @@ section.slide-one, section.footer {
     padding-bottom: 2rem;
 }
 
+/*=== Page transitions ===*/
+
+/*barba.js*/
+
+
+
+
+
+
+/*Swup https://swup.js.org
+
+.transition-fade {
+    transition: .5s;
+    opacity: 1;
+  }
+  
+  html.is-animating .transition-fade {
+    opacity: 0;
+  }
+  */
+  
 /*=== SLIDE-ONE | 'HOME' ===*/
 
 section.slide-one {
@@ -437,11 +455,35 @@ section.slide-three {
     align-items: center;
     color: #fff;
     text-align: center;
-    justify-content: space-evenly;
+   /* justify-content: space-evenly;*/
     padding: 3rem 0;
 }
 
-/*=================== PROBLEMS & ACTIONS =================================*/
+/*=== SLIDE FOUR | WELFARE INTERVIEW ===*/
+
+section.slide-four {
+    background: rgb(55, 106, 145);
+   /* background-image: url("https://rcopestake65.github.io/right_to_remain_dev/images/claim-asylum-02.png"), linear-gradient(90deg, rgba(99, 156, 198, 1) 30%, rgba(128, 177, 213, 1) 52%, rgba(99, 156, 198, 1) 70%);*/
+    background-repeat: no-repeat;
+    background-position: top right;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+   /* justify-content: space-evenly;*/
+    padding: 3rem 0;
+}
+
+
+/*=== SLIDE FIVE - LOCAL AUTHORITY CARE ===*/
+
+section.slide-five {
+    background-color: #999;
+}
+
+/*=== PROBLEMS & ACTIONS ====*/
 
 /*== accordion ==*/
 
@@ -476,7 +518,7 @@ section.slide-three {
     border-radius: 5px;
 }
 
-.accordion-grid {
+.accordion-grid-1, .accordion-grid-2 {
     grid-template-columns: 1fr;
 }
 
@@ -489,7 +531,7 @@ section.slide-three {
     font-size: 1em;
     letter-spacing: .1em;
     transition: all .3s;
-    opacity: 0;
+    
     border-bottom: 1px dashed #C0C8F8;
 }
 /*
@@ -563,17 +605,7 @@ section.slide-three {
     }
 }
 
-/*=== SLIDE FOUR - WELFARE INTERVIEW ===*/
 
-section.slide-four {
-    background-color: aliceblue;
-}
-
-/*=== SLIDE FIVE - LOCAL AUTHORITY CARE ===*/
-
-section.slide-five {
-    background-color: azure;
-}
 
 /*=== SLIDE ELEVEN - STAR CARDS ===*/
 
@@ -617,9 +649,7 @@ section.slide-eleven {
 .card-menu-item a{
     color: #000;
 }
-.card-btn{
 
-}
 .card-menu-item-1, .card-menu-item-2, .card-menu-item-3, .card-menu-item-4, .card-menu-item-4, .card-menu-item-5, .card-menu-item-6, .card-menu-item-7, .card-menu-item-8, .card-menu-item-9, .card-menu-item-10, .card-menu-item-11, .card-menu-item-12, .card-menu-item-13 {
     background-repeat: no-repeat;
     background-size: 152px 212px;
