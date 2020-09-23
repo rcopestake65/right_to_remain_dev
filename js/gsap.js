@@ -384,68 +384,57 @@ function navOut(){
 };
 // ========== PROBLEMS & ACTIONS  ======================
 
-gsap.set(
-  [
- ".accordion-grid-1",
- ".accordion-grid-2"
-], {opacity: 0, display: "none", scaleX: 0, scaleY: 0 });
+// hide all accordions in the array 
+gsap.set([".accordion-grid-1",".accordion-grid-2",], {opacity: 0, display: "none", scaleX: 0, scaleY: 0 });
 
 
-/* first accordion */
+// all variables for all accordions 
 var tlAcc1 = new gsap.timeline({ paused: true });
-forward = true;
-
-$(".gsap-btn-1").on("click", function () {
-  if(!forward)
-  {
-    tlAcc1.reverse();
-  }
-  else
-  {
-    tlAcc1.play();
-  }
-  //this toggles the boolean on each click event
-  forward = forward  ? false : true;
-});
 
 
-tlAcc1.to(".accordion-grid-1",{
+var div1 = $(".accordion-grid-1"),
+    btn1 = $(".gsap-btn-1"),
+
+
+tlAcc1 = gsap.to(div1,{
   display: "block",
   opacity: 1,
   duration: 1,
   scaleY: 1,
-  scaleX: 1
-});
+  scaleX: 1,
+  ease:Back.easeOut
+    }).reversed(true);
 
-/* second accordion */
+    function toggleDirection1() {
+      tlAcc1.reversed( !tlAcc1.reversed() );
+    }
+    
+    btn1.click(function(){
+      toggleDirection1();
+    });
 
+// second accordion
 var tlAcc2 = new gsap.timeline({ paused: true });
-forward = true;
 
-$(".gsap-btn-2").on("click", function () {
-  if(!forward)
-  {
-    tlAcc2.reverse();
-  }
-  else
-  {
-    tlAcc2.play();
-  }
-  //this toggles the boolean on each click event
-  forward = forward  ? false : true;
-});
+var div2 = $(".accordion-grid-2"),
+    btn2 = $(".gsap-btn-2"),
 
-
-tlAcc2.to(".accordion-grid-2",{
+tlAcc2 = gsap.to(div2,{
   display: "block",
   opacity: 1,
   duration: 1,
   scaleY: 1,
-  scaleX: 1
-});
+  scaleX: 1,
+  ease:Back.easeOut
+    }).reversed(true);
 
-
-
+    function toggleDirection2() {
+      tlAcc2.reversed( !tlAcc2.reversed() );
+    }
+    
+    btn2.click(function(){
+      toggleDirection2();
+    });
 
 
 

@@ -434,7 +434,7 @@ section.slide-three {
     align-items: center;
     color: #fff;
     text-align: center;
-    justify-content: space-evenly;
+   /* justify-content: space-evenly;*/
     padding: 3rem 0;
 }
 
@@ -451,7 +451,7 @@ section.slide-four {
     align-items: center;
     color: #fff;
     text-align: center;
-    justify-content: space-evenly;
+   /* justify-content: space-evenly;*/
     padding: 3rem 0;
 }
 
