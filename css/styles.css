@@ -190,7 +190,7 @@ section.slide-one, section.footer {
     top: 0;
     left: 0;
     background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    width: 50%;
+    min-width: 360px;
     padding: 30px;
     transform: translateX(-100%);
     transition: transform 0.5s ease-in-out;
@@ -219,7 +219,6 @@ section.slide-one, section.footer {
     margin-bottom: 2rem;
     margin-left: -40px;
     opacity: 0;
-    max-width: 350px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -269,27 +268,6 @@ section.slide-one, section.footer {
     padding-bottom: 2rem;
 }
 
-/*=== Page transitions ===*/
-
-/*barba.js*/
-
-
-
-
-
-
-/*Swup https://swup.js.org
-
-.transition-fade {
-    transition: .5s;
-    opacity: 1;
-  }
-  
-  html.is-animating .transition-fade {
-    opacity: 0;
-  }
-  */
-  
 /*=== SLIDE-ONE | 'HOME' ===*/
 
 section.slide-one {

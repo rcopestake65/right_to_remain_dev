@@ -31,7 +31,7 @@ gsap.to(".more-btn", {
   yoyo: true
 })
 
-//=============== SLIDE TWO | MAP =====================================================================
+//=============== OVERVIEW.HTML =====================================================================
 gsap.set(".title-two", { opacity: 0, y: -50 });
 gsap.to(".title-two",{
     duration: 2,
@@ -152,7 +152,7 @@ function starOut(){
  
 }
 
-//=== MAIN NAV CONTENTS ===
+//========= MAIN NAV CONTENTS ===================================================
 
     var tl2 = new gsap.timeline({ paused: true })
 
@@ -163,7 +163,7 @@ function starOut(){
     tl2.to(".nav-item-container", {
       opacity: 1,
       duration: 1,
-      x: 70,
+      x: 30,
       delay: .1,
       ease: "power.inOut(1, 0.3)",
       autoAlpha: 1,
