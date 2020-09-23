@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="canonical" href="#" />
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <title>Right to Remain - Asylum Journey</title>
+</head>
+
+<body>
+
+   
+    <!-- ========== MAIN MENU / HAMBURGER ================== -->
+    <div class="main-nav-sticky-container">
+       
+    <div class="nav-container">
+     
+
+        <nav class="main-nav">
+            <div class="menu-open-btn">
+                <img src="images/menu-btn.png">
+    
+            </div>
+            <div class="main-menu-container">
+                <div class="menu-close-btn">
+                    <i class="fas fa-window-close"></i>
+                </div>
+                <div class="nav-item-container">
+                    <a class="stage-btn" href="index.html"><img src="images/home-icon.png"></a>
+                    <h3>The Stages of an Asylum Journey</h3>
+                    <hr>
+                    <a class="stage-btn" href="claim-asylum.html">
+                        <div class="nav-item nav-item-1">Claim Asylum</div>
+                    </a>
+                    <a class="stage-btn" href="welfare-interview.html">
+                        <div class="nav-item nav-item-2">Welfare Interview</div>
+                    </a>
+                    <a class="stage-btn" href="#">
+                        <div class="nav-item nav-item-3">Local Authority Care</div>
+                    </a>
+                    <a class="stage-btn" href="#">
+                        <div class="nav-item nav-item-4">Evidence Form</div>
+                    </a>
+                    <a class="stage-btn" href="#">
+                        <div class="nav-item nav-item-5">Home Office positive decision</div>
+                    </a>
+                    <a class="stage-btn" href="#">
+                        <div class="nav-item nav-item-6">Home Office refusal</div>
+                    </a>
+                    <a class="stage-btn" href="#">
+                        <div class="nav-item nav-item-7">Submit appeal</div>
+                    </a>
+                    <a class="stage-btn" href="#">
+                        <div class="nav-item nav-item-8">Appeal hearing</div>
+                    </a>
+                    <div class="star-card">
+                        <a class="stage-btn" href="star-cards.html">
+                            <img src="images/star-card-sm-01.png">
+                            <h5>Star Cards</h5>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </nav>
+
+    </div>
+    <!-- end main menu / hamburger -->
+    <!-- ========== SLIDE THREE / CLAIM ASYLUM ==================-->
+    <span id="slide-three"></span>
+    <section class="slide-three">
+
+        <div class="slide">
+            <div class="intro">
+
+                <h3>Claim Asylum</h3>
+                <p>Claiming asylum means asking the UK for protection because you fear for your life (you are scared)
+                    for
+                    very specific reasons under the law.
+                <p>To claim asylum, you either tell the immigration officials (government workers) at the airport/port
+                    you
+                    arrive at, or you go to a Home Office building if you have not claimed asylum at the airport/port.
+                </p>
+                <p> The Home Office is a government department dealing with immigration and asylum. Home Office case
+                    workers
+                    are the people who will look into your reasons for wanting protection and stay in the UK. </p>
+                <p> You will usually need to go to Home Office in Croydon if you don't claim asylum at the airport/port,
+                    but
+                    if you are a long way from Croydon in South London, the Home Office may allow you to go to an office
+                    nearer to where you are.</p>
+
+            </div>
+            <!-- ===== PROBLEMS & ACTIONS ACCORDION ====-->
+            <span id="slide-three-problems"></span>
+            <div class="accordion-container">
+                <button class="common-problems-btn gsap-btn-1">Common Problems &amp;
+                    Actions <br><i class="fas fa-plus-circle"></i></button>
+
+            <div class="accordion js-accordion accordion-grid-1">
+                <div class="accordion__item js-accordion-item">
+                    <div class="accordion-header accordion-header-1 js-accordion-header">
+                        <p> You don't know how to claim asylum</p>
+                    </div>
+                    <div class="accordion-body js-accordion-body">
+                        <div class="accordion-body__contents">
+                            <p>Go to the police or ask someone to show you how to get to the
+                                local council or social services</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion__item js-accordion-item">
+                    <div class="accordion-header accordion-header-2 js-accordion-header">
+                        <p> You turn up at the Home Office to claim asylum without an
+                            appointment. </p>
+                    </div>
+                    <div class="accordion-body js-accordion-body">
+                        <div class="accordion-body__contents">
+                            <p>You explain that you are homeless, and that the Home Office
+                                policy is that “You don’t need to make an appointment if you have nowhere to live – you
+                                can go
+                                to the screening unit between 7:30am and 4:00pm, Monday to Friday”</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion__item js-accordion-item">
+                    <div class="accordion-header accordion-header-3 js-accordion-header">
+                        <p>You claim asylum a week or two after arrival. Not everyone will claim asylum as soon as they
+                            arrive, and there can be good reasons for this. However, it is really important you claim as
+                            soon as possible because this could go against you in your application for asylum. The Home
+                            Office may argue that this is evidence that you are not in real danger.</p>
+                    </div>
+                    <div class="accordion-body js-accordion-body">
+                        <div class="accordion-body__contents">
+                            <p>If you don’t claim asylum immediately on entering the UK, you will need to telephone to
+                                make an
+                                appointment to claim asylum at the Screening Unit in Croydon. You can do so by searching
+                                “Asylum
+                                Screening Unit Croydon” online and calling the number. You may have to try many times
+                                before you
+                                get through.</p>
+                            <p> You can ask your solicitor to explain to the Home Office why you didn’t claim asylum
+                                straight
+                                away.</p>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="accordion__item js-accordion-item">
+                    <div class="accordion-header accordion-header-4 js-accordion-header">
+                        <p>You do not have a solicitor when you claim asylum</p>
+                    </div>
+                    <div class="accordion-body js-accordion-body">
+                        <div class="accordion-body__contents">
+                            <p>If possible, you should claim with a solicitor - but this is not always possible early on
+                                in the asylum process. Your local authority social worker will help you with finding a
+                                solicitor.</p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+            </div>
+      
+            <!-- end accordion-->
+            
+        </div><!-- end slide -->
+        <div class="next-btn-container">
+            <a href="welfare-interview.html"><span class="more-btn"><i class="fas fa-arrow-circle-down"></i></span></a>
+        </div>
+
+    </section><!-- end slide three / claim asylum -->
+
+  
+
+    <script src="js/sliding-menus.js"></script>
+    <script src="js/gsap.js"></script>
+    <script src="js/accordion.js"></script>
+
+</body>
+
+</html>
