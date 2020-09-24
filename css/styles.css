@@ -16,7 +16,6 @@ Steve Mersereau | Richard Copestake
     --p-large-mobile: 1.1rem;
 }
 
-
 * {
     box-sizing: border-box;
 }
@@ -94,7 +93,7 @@ h4 {
 
 p {
     margin-bottom: 1rem;
-    font-size: var(--p-medium);
+    font-size: clamp(.3rem, 1.1rem, 1.5rem);
 }
 
 .mb2 {
@@ -130,7 +129,12 @@ section.home, section.footer {
     max-width: 1000px;
     margin: 0 auto;
 }
-
+@media (max-width: 600px){
+    .container {
+        width: 90%;
+        padding: 0;
+    }
+}
 /*===== MAIN NAVIGATION - Asylum Journey ==================*/
 
 /*=== open & close btns ===*/
@@ -266,7 +270,7 @@ section.home, section.footer {
     padding-bottom: 2rem;
 }
 
-/*=== SLIDE-ONE | 'HOME' ===*/
+/*=== HOME ===*/
 
 section.home {
     margin-top: 0;
@@ -334,7 +338,7 @@ section.home {
     opacity: .2;
 }
 
-/*==== SLIDE-TWO | 'MAP' ===*/
+/*==== OVERVIEW ===*/
 
 section.overview {
     background-color: rgb(15, 12, 41);
@@ -416,7 +420,7 @@ section.overview {
     color: var(--orange);
 }
 
-/*=== SLIDE THREE | CLAIM ASYLUM ===*/
+/*=== CLAIM ASYLUM ===*/
 
 section.asylum {
     background: rgb(99, 156, 198);
@@ -433,7 +437,7 @@ section.asylum {
     padding: 3rem 0;
 }
 
-/*=== SLIDE FOUR | WELFARE INTERVIEW ===*/
+/*=== WELFARE INTERVIEW ===*/
 
 section.welfare {
     background: rgb(55, 106, 145);
@@ -451,7 +455,7 @@ section.welfare {
 }
 
 
-/*=== SLIDE FIVE - LOCAL AUTHORITY CARE ===*/
+/*=== LOCAL AUTHORITY CARE ===*/
 
 section.slide-five {
     background-color: #999;
@@ -581,7 +585,7 @@ section.slide-five {
 
 
 
-/*=== SLIDE ELEVEN - STAR CARDS ===*/
+/*=== STAR CARDS ===*/
 
 section.star-cards {
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
@@ -628,6 +632,7 @@ section.star-cards {
     background-repeat: no-repeat;
     background-size: 152px 212px;
     min-height: 212px;
+    background-position: center;
 
 }
 
@@ -750,20 +755,3 @@ footer {
     align-items: center;
     text-align: center;
 }
-
-/*-- ANIMATION TESTS -- 
-
-
-.box {
-  position:relative;
-  border-radius:6px;
-  margin-top:4px;
-  display:inline-block;
-  background-color:#6fb936;
-}
-#box1{
-    position: relative;
-    left: 0;
-    opacity: 0;
-
-}*/
