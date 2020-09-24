@@ -1,5 +1,13 @@
 background image animations
+<<<<<<< HEAD
 page 'active' highlights for menu?
 find a colour scheme
 add dotted line to end of pages
 animate titles and intro of all sections
+=======
+playing card idea for start cards - using childrens designs
+ page 'active' highlights for menu?
+
+
+find a colour scheme
+>>>>>>> 3bc24b7870111d0afe23cb23bac1f773fdc544bb
