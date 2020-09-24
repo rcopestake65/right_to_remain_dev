@@ -16,10 +16,14 @@ Steve Mersereau | Richard Copestake
     --p-large-mobile: 1.1rem;
 }
 
+
 * {
     box-sizing: border-box;
 }
-
+/*force a scroll bar to avoid 'jump'*/
+html{
+    overflow-y: scroll;
+}
 html, body {
     height: 100%;
     margin: 0;
@@ -83,7 +87,7 @@ h4 {
     margin-bottom: 1rem;
 }
 
-.slide h3 {
+.container h3 {
     font-size: 2rem;
     color: #fff;
 }
@@ -115,12 +119,12 @@ section {
     }
 }
 
-section.slide-one, section.footer {
+section.home, section.footer {
     min-height: 100vh;
     border-bottom: 1px dashed #fff;
 }
 
-.slide {
+.container {
     padding: 70px;
     position: relative;
     max-width: 1000px;
@@ -217,8 +221,8 @@ section.slide-one, section.footer {
 
 .nav-item-container {
     margin-bottom: 2rem;
-    margin-left: -40px;
-    opacity: 0;
+    margin-left: 10px;
+    opacity: 1;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -258,19 +262,13 @@ section.slide-one, section.footer {
 
 /*=== general/site-wide ===*/
 
-@media (min-width: 700px) {
-    .intro {
-        margin: 0 auto;
-    }
-}
-
 .next-btn-container {
     padding-bottom: 2rem;
 }
 
 /*=== SLIDE-ONE | 'HOME' ===*/
 
-section.slide-one {
+section.home {
     margin-top: 0;
     background: rgb(15, 12, 41);
     background: linear-gradient(90deg, rgba(15, 12, 41, 1) 30%, rgba(48, 43, 99, 1) 52%, rgba(15, 12, 41, 1) 70%);
@@ -283,44 +281,42 @@ section.slide-one {
     position: relative;
 }
 
-.slide-one h2 {
+.home h2 {
     font-size: 2.5rem;
     line-height: 2.8rem;
     color: var(--gold);
     margin-bottom: 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #fff;
 }
-
+/*
 .underline {
     border-top: 2px solid #fff;
     margin-top: 10px;
-}
+}*/
 
-.slide-one p {
+.home p {
     max-width: 60%;
     font-size: var(--p-large);
     line-height: 1.6rem;
 }
 
-.slide-one a {
+.home a {
     color: #fff;
 }
 
-.slide-one a:hover {
+.home a:hover {
     color: var(--blue-hover);
 }
 /*-- illustration --*/
-.illustrations{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.illustrations p{
+
+
+.home p:nth-of-type(1){
     font-family: 'Amatic SC', cursive;
 }
 
 @media (max-width: 500px) {
-    .slide-one p {
+    .home p {
         font-size: var(--p-large-mobile);
     }
 }
@@ -340,7 +336,7 @@ section.slide-one {
 
 /*==== SLIDE-TWO | 'MAP' ===*/
 
-section.slide-two {
+section.overview {
     background-color: rgb(15, 12, 41);
     background-image: url("https://rcopestake65.github.io/right_to_remain_dev/images/walking-man.png"), linear-gradient(90deg, rgba(15, 12, 41, 1) 30%, rgba(48, 43, 99, 1) 52%, rgba(15, 12, 41, 1) 70%);
     background-repeat: no-repeat;
@@ -355,41 +351,41 @@ section.slide-two {
     padding: 3rem 0;
 }
 @media (max-width: 1000px){
-    section.slide-two {
+    section.overview {
         background-color: rgb(15, 12, 41);
         background-position: left center;
     }
 }
 @media (max-width: 800px){
-    section.slide-two {
+    section.overview {
         background-color: rgb(15, 12, 41);
         background-image: none;
     }
 }
-.slide-two h3 {
+.overview h3 {
     font-size: 2rem;
 }
 
-.slide-two p {
+.overview p {
     max-width: 60%;
     font-size: var(--p-large);
     line-height: 1.6rem;
 }
 
-.slide-two .next-btn-container {
+.overview .next-btn-container {
     margin-top: 2rem;
 }
 
-.slide-two a {
+.overview a {
     color: #fff;
 }
 
-.slide-two a:hover {
+.overview a:hover {
     color: var(--blue-hover);
 }
 
 @media (max-width: 500px) {
-    .slide-two p {
+    .overview p {
         font-size: var(--p-large-mobile);
     }
 }
@@ -422,7 +418,7 @@ section.slide-two {
 
 /*=== SLIDE THREE | CLAIM ASYLUM ===*/
 
-section.slide-three {
+section.asylum {
     background: rgb(99, 156, 198);
     background-image: url("https://rcopestake65.github.io/right_to_remain_dev/images/claim-asylum-02.png"), linear-gradient(90deg, rgba(99, 156, 198, 1) 30%, rgba(128, 177, 213, 1) 52%, rgba(99, 156, 198, 1) 70%);
     background-repeat: no-repeat;
@@ -439,7 +435,7 @@ section.slide-three {
 
 /*=== SLIDE FOUR | WELFARE INTERVIEW ===*/
 
-section.slide-four {
+section.welfare {
     background: rgb(55, 106, 145);
    /* background-image: url("https://rcopestake65.github.io/right_to_remain_dev/images/claim-asylum-02.png"), linear-gradient(90deg, rgba(99, 156, 198, 1) 30%, rgba(128, 177, 213, 1) 52%, rgba(99, 156, 198, 1) 70%);*/
     background-repeat: no-repeat;
@@ -587,7 +583,7 @@ section.slide-five {
 
 /*=== SLIDE ELEVEN - STAR CARDS ===*/
 
-section.slide-eleven {
+section.star-cards {
     background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
     position: relative;
     display: flex;
