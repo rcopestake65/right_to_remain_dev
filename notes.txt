@@ -1,9 +1,5 @@
-
-
-
 background image animations
-playing card idea for start cards - using childrens designs
- page 'active' highlights for menu?
-
-
+page 'active' highlights for menu?
 find a colour scheme
+add dotted line to end of pages
+animate titles and intro of all sections
