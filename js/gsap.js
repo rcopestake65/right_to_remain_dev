@@ -204,12 +204,7 @@ function starOut(){
 // ========== PROBLEMS & ACTIONS  ======================
 
 // hide all accordions in the array 
-<<<<<<< HEAD
 gsap.set(".accordion-grid", {opacity: 0, display: "none", scaleX: 0, scaleY: 0 });
-=======
-gsap.set([".accordion-grid-1",".accordion-grid-2",], {opacity: 0, display: "none", scaleX: 0, scaleY: 0 });
-
->>>>>>> 3bc24b7870111d0afe23cb23bac1f773fdc544bb
 
 // all variables for all accordions 
 var tlAcc1 = new gsap.timeline({ paused: true });
@@ -217,20 +212,12 @@ var tlAcc1 = new gsap.timeline({ paused: true });
 // all variables for all accordions 
 var tlAcc = new gsap.timeline({ paused: true });
 
-<<<<<<< HEAD
 
 var div = $(".accordion-grid");
 var btn = $(".gsap-btn"),
 
 
 tlAcc = gsap.to(div,{
-=======
-var div1 = $(".accordion-grid-1"),
-    btn1 = $(".gsap-btn-1"),
-
-
-tlAcc1 = gsap.to(div1,{
->>>>>>> 3bc24b7870111d0afe23cb23bac1f773fdc544bb
   display: "block",
   opacity: 1,
   duration: 1,
@@ -240,45 +227,12 @@ tlAcc1 = gsap.to(div1,{
     }).reversed(true);
 
     function toggleDirection1() {
-<<<<<<< HEAD
       tlAcc.reversed( !tlAcc.reversed() );
     }
     
     btn.click(function(){
       toggleDirection1();
     });
-=======
-      tlAcc1.reversed( !tlAcc1.reversed() );
-    }
-    
-    btn1.click(function(){
-      toggleDirection1();
-    });
-
-// second accordion
-var tlAcc2 = new gsap.timeline({ paused: true });
-
-var div2 = $(".accordion-grid-2"),
-    btn2 = $(".gsap-btn-2"),
-
-tlAcc2 = gsap.to(div2,{
-  display: "block",
-  opacity: 1,
-  duration: 1,
-  scaleY: 1,
-  scaleX: 1,
-  ease:Back.easeOut
-    }).reversed(true);
-
-    function toggleDirection2() {
-      tlAcc2.reversed( !tlAcc2.reversed() );
-    }
-    
-    btn2.click(function(){
-      toggleDirection2();
-    });
-
->>>>>>> 3bc24b7870111d0afe23cb23bac1f773fdc544bb
 
 
 //=========== STAR CARDS ==================
