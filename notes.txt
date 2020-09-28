@@ -3,5 +3,6 @@ page 'active' highlights for menu?
 find a colour scheme
 add dotted line to end of pages
 animate titles and intro of all sections
+remove classes from accordion - header-1 etc
 
 
