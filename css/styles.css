@@ -742,8 +742,8 @@ section.star-cards {
 
 @media (max-width: 500px) {
     .card-1, .card-2 {
-        left: -50px;
-        width: 140%;
+        left: 0;
+        width: 90%;
         padding: 20px;
     }
     .card-show {
