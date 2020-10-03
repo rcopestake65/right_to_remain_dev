@@ -6,4 +6,21 @@ animate titles and intro of all sections
 remove classes from accordion - header-1 etc
 Add background shapes and colours to the illustrations that reflect the colour of the section
 
+client notes 02-10-20
+ I don't think she likes the dark background. I think she'd prefer a white or very light background or backgrounds
+ She'd like the text throughout the site to be contained. My word. In other (better) words she wants a border
+ Text is free flowing and there is no border"
 
+"Problem cards should be laid underneath the page content like a deck of cards"
+
+"I don't like the purple"
+
+"Claim Asylum headline text to be larger
+
+She referenced the Coram voice website (https://coramvoice.org.uk/) and said she likes the lightness and the illustration (edited) 
+
+She said the titles should be bigger
+
+She'd like spaces between the items on https://rcopestake65.github.io/right_to_remain_dev/overview.html
+
+She likes the Right to Remain Toolkit (https://righttoremain.org.uk/toolkit/) because it's "light" (edited) 

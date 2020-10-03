@@ -32,7 +32,7 @@ html, body {
 }
 
 body {
-    font-family: 'Lato', Helvetica, Arial, Lucida, sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #666;
     line-height: 1.7rem;
 }
@@ -76,11 +76,13 @@ ul {
 h2 {
     font-size: 1.7rem;
     margin-bottom: 1em;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h3 {
     font-size: 1.4rem;
     margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 h4 {
@@ -276,10 +278,7 @@ section.home, section.footer {
 
 section.home {
     margin-top: 0;
-    background: rgb(15, 12, 41);
-    background: linear-gradient(90deg, rgba(15, 12, 41, 1) 30%, rgba(48, 43, 99, 1) 52%, rgba(15, 12, 41, 1) 70%);
     text-align: center;
-    color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -290,10 +289,9 @@ section.home {
 .home h2 {
     font-size: 2.5rem;
     line-height: 2.8rem;
-    color: var(--gold);
     margin-bottom: 0;
     padding-bottom: 10px;
-    border-bottom: 3px solid #fff;
+    border-bottom: 3px solid #000;
 }
 /*
 .underline {
@@ -330,6 +328,16 @@ section.home {
 .logo-img {
     margin-bottom: 3rem;
 }
+            
+.ellipse { 
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+    max-width: 30%;
+}
+
+    
 
 /*=== animated scroll button ===*/
 
@@ -337,7 +345,8 @@ section.home {
 
 .more-btn {
     font-size: 3.5rem;
-    opacity: .2;
+    opacity: .3;
+    color: #666;
 }
 
 /*==== OVERVIEW ===*/

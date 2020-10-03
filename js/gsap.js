@@ -5,7 +5,7 @@ gsap.set(".home img:nth-of-type(1)", { opacity: 0, y: -50 });
 gsap.to(".home img:nth-of-type(1)", { duration: 2, x: 0, y: 0, opacity: 1 });
 
 gsap.set(".home h2", { opacity: 0, y: -50, borderBottom: 0 });
-gsap.to(".home h2", { duration: 2, x: 0, y: 0, opacity: 1, borderBottom: "2px solid white", delay: .3 });
+gsap.to(".home h2", { duration: 2, x: 0, y: 0, opacity: 1, delay: .3 });
 
 gsap.set(".underline", { width: 0 });
 gsap.to(".underline", { width: "45%", delay: 1.3, duration: 1 });
@@ -25,6 +25,18 @@ gsap.to(".next-btn-container", { duration: 2, x: 0, y: 0, opacity: 1, delay: .7 
 //more btn    
 gsap.to(".more-btn", { opacity: 1, duration: 1, repeat: -1, yoyo: true })
 
+//background shapes
+/*
+gsap.set(".shape-1", { opacity: 0 });
+gsap.to(".shape-1", { duration: 1, x: 0, y: 0, opacity: 1, scale: 1.2, transformOrigin: 'center', delay: .7 });
+
+gsap.set(".shape-2", {opacity: 0 });
+gsap.to(".shape-2", { duration: 2, x: 0, y: 0, opacity: 1, delay: 2 });
+*/
+var tlshape = gsap.timeline({defaults:{duration: .8, scale: .2, ease: Back.easeOut.config(2), opacity: 0 }});
+tlshape.from(".shape-1", {delay: .5,  transformOrigin: 'center'});
+tlshape.from(".shape-2", {delay: 0,  transformOrigin: 'center'});
+tlshape.from(".shape-3", {delay: 0,  transformOrigin: 'center'});
 //=============== OVERVIEW.HTML =====================================================================
 
 gsap.set(".overview h3", { opacity: 0, y: -50 });
