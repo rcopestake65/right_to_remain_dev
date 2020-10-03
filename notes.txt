@@ -4,5 +4,6 @@ find a colour scheme
 add dotted line to end of pages
 animate titles and intro of all sections
 remove classes from accordion - header-1 etc
+Add background shapes and colours to the illustrations that reflect the colour of the section
 
 
