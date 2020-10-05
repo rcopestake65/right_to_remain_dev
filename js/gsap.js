@@ -96,36 +96,81 @@ function starOut() {
 
 // ========== PROBLEMS & ACTIONS  ======================
 
-CSSPlugin.defaultTransformPerspective = 1000;
+//problem 1
+gsap.set($(".card-back-1"), {rotationY:-180});
 
-//we set the backface 
-gsap.set($(".cardBack"), {rotationY:-180});
-
-$.each($(".cardCont"), function(i,element) {
+$.each($(".card-container"), function(i,element) {
   
-	var frontCard = $(this).children(".cardFront"),
-      backCard = $(this).children(".cardBack"),
-      tl = new TimelineMax({paused:true});
+	var frontCard1 = $(this).children(".card-front-1"),
+      backCard1 = $(this).children(".card-back-1"),
+      tlcardShow1 = new TimelineMax({paused:true});
 	
-	tl
-		.to(frontCard, 1, {rotationY:180})
-		.to(backCard, 1, {rotationY:0},0)
+	tlcardShow1
+		.to(frontCard1, 1, {rotationY:180})
+		.to(backCard1, 1, {rotationY:0},0)
 		.to(element, .5, {z:50},0)
 		.to(element, .5, {z:0},.5);
 	
-	element.animation = tl;
+    $(".flip-btn-1").on("click", function(){
+      tlcardShow1.play();
+      
+  });
+
+  $(".flip-btn-back-1").on("click", function(){
+    tlcardShow1.reverse();
+    
+});
+  
+});
+//problem 3
+gsap.set($(".card-back-3"), {rotationY:-180});
+
+$.each($(".card-container"), function(i,element) {
+  
+	var frontCard3 = $(this).children(".card-front-3"),
+      backCard3 = $(this).children(".card-back-3"),
+      tlcardShow3 = new TimelineMax({paused:true});
+	
+	tlcardShow3
+		.to(frontCard3, 1, {rotationY:180})
+		.to(backCard3, 1, {rotationY:0},0)
+		.to(element, .5, {z:50},0)
+		.to(element, .5, {z:0},.5);
+	
+    $(".flip-btn-3").on("click", function(){
+      tlcardShow3.play();
+      
+  });
+
+  $(".flip-btn-back-3").on("click", function(){
+    tlcardShow3.reverse();
+    
+});
   
 });
 
-$(".cardCont").hover(elOver, elOut);
 
-function elOver() {
-    this.animation.play();
-}
 
-function elOut() {
-    this.animation.reverse();
-}
+//read more cards
+//hide until read more btn clicked
+gsap.set([".card-full"], { opacity: 0, scaleX: 0, scaleY: 0, display: "none" });
+
+/*card-full show*/
+var tlcardFull = new gsap.timeline({ paused: true });
+
+$(".card-full-btn").on("click", function () {
+  tlcardFull.play();
+});
+
+tlcardFull.to('.card-full', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "block"});
+
+var tlcardsClose2 = new gsap.timeline({ paused: true });
+
+$(".card-full-close-btn").on("click", function () {
+  tlcardFull.reverse();
+});
+
+
 
 
 //=========== STAR CARDS ==================
