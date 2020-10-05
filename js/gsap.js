@@ -45,11 +45,11 @@ gsap.to(".overview h3", { duration: 2, x: 0, y: 0, opacity: 1, delay: .3 });
 gsap.set(".star-card", { x: 50, opacity: 0 });
 gsap.to(".star-card", { duration: 2, x: 0, y: 0, opacity: 1, delay: .3 });
 
-gsap.set([".map-item-1", ".map-item-3", ".map-item-5", ".map-item-7"], { x: -40, opacity: 0 });
+gsap.set([".map-item-1", ".map-item-3", ".map-item-5", ".map-item-7", ".map-item-9"], { x: -40, opacity: 0 });
 gsap.set([".map-item-2", ".map-item-4", ".map-item-6", ".map-item-8"], { x: 40, opacity: 0 });
 
 gsap.to([".map-item-1", ".map-item-2", ".map-item-3", ".map-item-4",
-  ".map-item-5", ".map-item-6", ".map-item-7", ".map-item-8",], { duration: 1, x: 0, opacity: 1, ease: "power.inOut(1, 0.3)", autoAlpha: 1, });
+  ".map-item-5", ".map-item-6", ".map-item-7", ".map-item-8", ".map-item-9"], { duration: 1, x: 0, opacity: 1, ease: "power.inOut(1, 0.3)", autoAlpha: 1, });
 
 gsap.to(".map-item-2", { delay: .2, });
 gsap.to(".map-item-3", { delay: .3, });
@@ -64,11 +64,12 @@ gsap.to(".map-item-8", { delay: .8, });
 $(".map-item").hover(over, out);
 
 function over() {
-  gsap.to(this, 0.2, { y: -5, backgroundColor: "#1f1b45" })
+  gsap.to(this, 0.2, { x: 23 });
 }
 
 function out() {
-  gsap.to(this, 0.2, { y: 0, backgroundColor: "#FA9A06" })
+  gsap.to(this, 0.2, { y: 0, x: 0 })
+  gsap.to('.fa-chevron-circle-right' , {className: 'fa-chevron-circle-right'} );
 }
 
 //mouseover star card 
@@ -85,30 +86,7 @@ function starOut() {
 
 // ========== PROBLEMS & ACTIONS  ======================
 
-// hide all accordions in the array 
-gsap.set(".accordion-grid", { opacity: 0, display: "none", scaleX: 0, scaleY: 0 });
 
-// all variables for all accordions 
-var tlAcc1 = new gsap.timeline({ paused: true });
-
-// all variables for all accordions 
-var tlAcc = new gsap.timeline({ paused: true });
-
-
-var div = $(".accordion-grid");
-var btn = $(".gsap-btn"),
-
-
-tlAcc = gsap.to(div, {display: "block", opacity: 1, duration: 1, scaleY: 1, scaleX: 1, ease: Back.easeOut
-  }).reversed(true);
-
-function toggleDirection1() {
-  tlAcc.reversed(!tlAcc.reversed());
-}
-
-btn.click(function () {
-  toggleDirection1();
-});
 
 //=========== STAR CARDS ==================
 
