@@ -1,9 +1,9 @@
 background image animations
 page 'active' highlights for menu?
-find a colour scheme
-add dotted line to end of pages
+find a colour scheme of light 'pastels'
+look at using the scheme without covering whole background
 animate titles and intro of all sections
-remove classes from accordion - header-1 etc
+
 Add background shapes and colours to the illustrations that reflect the colour of the section
 
 client notes 02-10-20
@@ -11,6 +11,7 @@ client notes 02-10-20
  She'd like the text throughout the site to be contained. My word. In other (better) words she wants a border
  Text is free flowing and there is no border"
 
+**Missing section**
 "Problem cards should be laid underneath the page content like a deck of cards"
 
 "I don't like the purple"
