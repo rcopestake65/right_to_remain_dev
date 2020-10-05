@@ -2,8 +2,10 @@
 
 //open
 document.querySelector('.menu-open-btn').addEventListener('click', () => document.querySelector('.main-nav').classList.toggle('show'));
+document.querySelector('.menu-open-btn').addEventListener('mouseenter', () => document.querySelector('.main-nav').classList.toggle('show'));
 //rotate chevrons
 document.querySelector('.menu-open-btn').addEventListener('click', () => document.querySelector('.chev-right').classList.toggle('rotate'));
+document.querySelector('.menu-open-btn').addEventListener('mouseenter', () => document.querySelector('.chev-right').classList.toggle('rotate'));
 document.querySelector('.menu-open-btn').addEventListener('click', () => document.querySelector('.chev-down').classList.toggle('rotate'));
 
 //close

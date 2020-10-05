@@ -37,7 +37,8 @@ var tlshape = gsap.timeline({defaults:{duration: .8, scale: .2, ease: Back.easeO
 tlshape.from(".shape-1", {delay: .5,  transformOrigin: 'center'});
 tlshape.from(".shape-2", {delay: 0,  transformOrigin: 'center'});
 tlshape.from(".shape-3", {delay: 0,  transformOrigin: 'center'});
-//=============== OVERVIEW.HTML =====================================================================
+
+//=============== OVERVIEW & NAVIGATION =====================================================================
 
 gsap.set(".overview h3", { opacity: 0, y: -50 });
 gsap.to(".overview h3", { duration: 2, x: 0, y: 0, opacity: 1, delay: .3 });
@@ -69,9 +70,18 @@ function over() {
 
 function out() {
   gsap.to(this, 0.2, { y: 0, x: 0 })
-  gsap.to('.fa-chevron-circle-right' , {className: 'fa-chevron-circle-right'} );
+};
+//mouseover home image/icon
+
+$(".home-btn").hover(overHome, outHome);
+
+function overHome() {
+  gsap.to(this, 0, { scaleX: 1.3, scaleY: 1.3 });
 }
 
+function outHome() {
+  gsap.to(this, 0, { scaleX: 1, scaleY: 1 })
+}
 //mouseover star card 
 gsap.set(".star-card", { transformOrigin: '100% 100%' });
 $(".star-card").hover(starOver, starOut);
@@ -86,6 +96,36 @@ function starOut() {
 
 // ========== PROBLEMS & ACTIONS  ======================
 
+CSSPlugin.defaultTransformPerspective = 1000;
+
+//we set the backface 
+gsap.set($(".cardBack"), {rotationY:-180});
+
+$.each($(".cardCont"), function(i,element) {
+  
+	var frontCard = $(this).children(".cardFront"),
+      backCard = $(this).children(".cardBack"),
+      tl = new TimelineMax({paused:true});
+	
+	tl
+		.to(frontCard, 1, {rotationY:180})
+		.to(backCard, 1, {rotationY:0},0)
+		.to(element, .5, {z:50},0)
+		.to(element, .5, {z:0},.5);
+	
+	element.animation = tl;
+  
+});
+
+$(".cardCont").hover(elOver, elOut);
+
+function elOver() {
+    this.animation.play();
+}
+
+function elOut() {
+    this.animation.reverse();
+}
 
 
 //=========== STAR CARDS ==================
