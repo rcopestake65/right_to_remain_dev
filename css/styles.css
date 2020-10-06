@@ -550,7 +550,7 @@ section {
     position: absolute;
     width: 338px;
     height: 475px;
-    background: url('/images/problem-card.png');
+    background: url('https://rcopestake65.github.io/right_to_remain_dev/images/problem-card.png');
     background-repeat: no-repeat;
     background-size: contain;
     backface-visibility: hidden;
@@ -569,7 +569,7 @@ section {
 }
 
 .card-back {
-    background: url('/images/problem-card-back.png');
+    background: url('https://rcopestake65.github.io/right_to_remain_dev/images/problem-card-back.png');
 }
 .card-full-btn{
     cursor: pointer;
