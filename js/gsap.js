@@ -133,6 +133,36 @@ $.each($(".card-container"), function(i,element) {
     tlcardShow1.reverse();
     
 });
+
+
+  
+});
+//problem 2
+gsap.set($(".card-back-2"), {rotationY:-180});
+
+$.each($(".card-container"), function(i,element) {
+  
+	var frontCard2 = $(this).children(".card-front-2"),
+      backCard2 = $(this).children(".card-back-2"),
+      tlcardShow2 = new TimelineMax({paused:true});
+	
+	tlcardShow2
+		.to(frontCard2, 1, {rotationY:180})
+		.to(backCard2, 1, {rotationY:0},0)
+		.to(element, .5, {z:50},0)
+		.to(element, .5, {z:0},.5);
+	
+    $(".flip-btn-2").on("click", function(){
+      tlcardShow2.play();
+      
+  });
+
+  $(".flip-btn-back-2").on("click", function(){
+    tlcardShow2.reverse();
+    
+});
+
+
   
 });
 //problem 3
@@ -161,27 +191,98 @@ $.each($(".card-container"), function(i,element) {
 });
   
 });
-
-
-
-//read more cards
+//Problem 3 read more cards
 //hide until read more btn clicked
-gsap.set([".card-full"], { opacity: 0, scaleX: 0, scaleY: 0, display: "none" });
+gsap.set([".card-full-3"], { opacity: 0, scaleX: 0, scaleY: 0, display: "none" });
 
 /*card-full show*/
-var tlcardFull = new gsap.timeline({ paused: true });
+var tlcardFull3 = new gsap.timeline({ paused: true });
 
-$(".card-full-btn").on("click", function () {
-  tlcardFull.play();
+$(".card-full-btn-3").on("click", function () {
+  tlcardFull3.play();
 });
 
-tlcardFull.to('.card-full', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex"});
+tlcardFull3.to('.card-full-3', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex"});
 
-var tlcardsClose2 = new gsap.timeline({ paused: true });
 
-$(".card-full-close-btn").on("click", function () {
-  tlcardFull.reverse();
+
+$(".card-full-close-btn-3").on("click", function () {
+  tlcardFull3.reverse();
 });
+
+
+//problem 4
+gsap.set($(".card-back-4"), {rotationY:-180});
+
+$.each($(".card-container"), function(i,element) {
+  
+	var frontCard4 = $(this).children(".card-front-4"),
+      backCard4 = $(this).children(".card-back-4"),
+      tlcardShow4 = new TimelineMax({paused:true});
+	
+	tlcardShow4
+		.to(frontCard4, 1, {rotationY:180})
+		.to(backCard4, 1, {rotationY:0},0)
+		.to(element, .5, {z:50},0)
+		.to(element, .5, {z:0},.5);
+	
+    $(".flip-btn-4").on("click", function(){
+      tlcardShow4.play();
+      
+  });
+
+  $(".flip-btn-back-4").on("click", function(){
+    tlcardShow4.reverse();
+    
+});
+  
+});
+
+//problem 5
+gsap.set($(".card-back-5"), {rotationY:-180});
+
+$.each($(".card-container"), function(i,element) {
+  
+	var frontCard5 = $(this).children(".card-front-5"),
+      backCard5 = $(this).children(".card-back-5"),
+      tlcardShow5 = new TimelineMax({paused:true});
+	
+	tlcardShow5
+		.to(frontCard5, 1, {rotationY:180})
+		.to(backCard5, 1, {rotationY:0},0)
+		.to(element, .5, {z:50},0)
+		.to(element, .5, {z:0},.5);
+	
+    $(".flip-btn-5").on("click", function(){
+      tlcardShow5.play();
+      
+  });
+
+  $(".flip-btn-back-5").on("click", function(){
+    tlcardShow5.reverse();
+    
+});
+  
+});
+//Problem 5 read more cards
+//hide until read more btn clicked
+gsap.set([".card-full-5"], { opacity: 0, scaleX: 0, scaleY: 0, display: "none" });
+
+/*card-full show*/
+var tlcardFull5 = new gsap.timeline({ paused: true });
+
+$(".card-full-btn-5").on("click", function () {
+  tlcardFull5.play();
+});
+
+tlcardFull5.to('.card-full-5', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex"});
+
+var tlcardsClose5 = new gsap.timeline({ paused: true });
+
+$(".card-full-close-btn-5").on("click", function () {
+  tlcardFull5.reverse();
+});
+
 
 
 
