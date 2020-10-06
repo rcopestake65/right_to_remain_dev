@@ -23,7 +23,7 @@ gsap.set(".next-btn-container", { y: 50, opacity: 0 });
 gsap.to(".next-btn-container", { duration: 2, x: 0, y: 0, opacity: 1, delay: .7 });
 
 //more btn    
-gsap.to(".more-btn", { opacity: 1, duration: 1, repeat: -1, yoyo: true })
+gsap.to(".more-btn", { opacity: 1, duration: 1, repeat: -1, yoyo: true });
 
 //background shapes
 /*
@@ -60,12 +60,20 @@ gsap.to(".map-item-6", { delay: .6, });
 gsap.to(".map-item-7", { delay: .7, });
 gsap.to(".map-item-8", { delay: .8, });
 
+//tab slide out btn
+gsap.set(".arrow-right", {opacity: .5});  
+gsap.to(".arrow-right", { opacity: 1, duration: 1, repeat: -1, yoyo: true });
+//tab slide down btn mobile
+gsap.set(".arrow-down", {opacity: .5});  
+gsap.to(".arrow-down", { opacity: 1, duration: 1, repeat: -1, yoyo: true });
+
+
 //mouseover form map items
 
 $(".map-item").hover(over, out);
 
 function over() {
-  gsap.to(this, 0.2, { x: 23 });
+  gsap.to(this, 0.2, { x: 10 });
 }
 
 function out() {
@@ -87,11 +95,11 @@ gsap.set(".star-card", { transformOrigin: '100% 100%' });
 $(".star-card").hover(starOver, starOut);
 
 function starOver() {
-  gsap.to(this, .2, { rotation: '+=5' });
+  gsap.to(this, .2, { scaleX: '1.05', scaleY: '1.05', transformOrigin:"center center" });
 }
 
 function starOut() {
-  gsap.to(this, .2, { rotation: '0' });
+  gsap.to(this, .2, {  scaleX: '1', scaleY: '1' });
 }
 
 // ========== PROBLEMS & ACTIONS  ======================
@@ -162,7 +170,7 @@ $(".card-full-btn").on("click", function () {
   tlcardFull.play();
 });
 
-tlcardFull.to('.card-full', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "block"});
+tlcardFull.to('.card-full', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex"});
 
 var tlcardsClose2 = new gsap.timeline({ paused: true });
 

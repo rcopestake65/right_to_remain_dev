@@ -10,6 +10,8 @@ Steve Mersereau | Richard Copestake
     --gold: #ccb404;
     --orange: #e09900;
     --off-white: #f4f4f4;
+    --card-front: #45b0dd;
+    --card-back: #4aca4b;
     /*font-sizes*/
     --p-large: 1.3rem;
     --p-medium: 1.1rem;
@@ -63,8 +65,6 @@ a {
     color: var(--blue);
     text-decoration: none;
     transition: all .3s ease-in-out;
-    align-self: center;
-    justify-self: center;
 }
 
 a:hover {
@@ -155,11 +155,11 @@ section {
 /*=== open & close btns ===*/
 
 .menu-open-btn {
-    width: 40px;
+    width: 50px;
     height: 100px;
     padding: 5px 0 0 5px;
     position: absolute;
-    top: 50%;
+    top: 10%;
     left: 365px;
     background-color: var(--off-white);
     border-radius: 5px;
@@ -168,35 +168,35 @@ section {
     align-items: center;
     justify-content: space-evenly;
     padding: 10px;
-    -webkit-box-shadow: 3px 6px 3px 0px rgba(209, 209, 209, 0.53);
-    -moz-box-shadow: 3px 6px 3px 0px rgba(209, 209, 209, 0.53);
-    box-shadow: 3px 6px 3px 0px rgba(209, 209, 209, 0.53);
+    -webkit-box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
 .menu-open-btn-mobile {
     display: none;
 }
 
-.chev-right, .chev-down {
+.arrow-right, .arrow-down {
     transition: .3s all;
     transform: rotate(0deg);
 }
 
-.chev-right.rotate, .chev-down.rotate {
+.arrow-right.rotate, .arrow-down.rotate {
     -moz-transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
 }
 
-.menu-open-btn .fa-chevron-down {
+.menu-open-btn .fa-arrow-circle-down {
     display: none;
 }
 
 @media (max-width: 800px) {
-    .menu-open-btn .fa-chevron-right {
+    .menu-open-btn .fa-arrow-circle-right {
         display: none;
     }
-    .menu-open-btn .fa-chevron-down {
+    .menu-open-btn .fa-arrow-circle-down {
         display: block;
     }
 }
@@ -208,9 +208,9 @@ section {
 .main-nav {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background-color: var(--off-white);
@@ -229,8 +229,6 @@ section {
     transform: translateX(0);
 }
 
-
-
 /*=== wider slide-in main nav on small devices ===*/
 
 @media (max-width: 800px) {
@@ -240,7 +238,7 @@ section {
         padding: 5px 0 0 5px;
         position: absolute;
         top: 99%;
-        left: 40%;
+        left: 35%;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
@@ -280,10 +278,6 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-}
-
-.nav-item-container .star-card {
-    margin-top: 1rem;
 }
 
 @media (max-width: 700px) {
@@ -389,7 +383,7 @@ section {
 /*font awsome version*/
 
 .more-btn {
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     opacity: .3;
     color: #666;
 }
@@ -427,17 +421,9 @@ section {
     font-size: 2rem;
 }
 
-.overview p {
-    max-width: 60%;
-    font-size: var(--p-large);
-    line-height: 1.6rem;
-}
-
 .overview .next-btn-container {
     margin-top: 2rem;
 }
-
-
 
 .overview a:hover {
     color: var(--blue-hover);
@@ -450,13 +436,13 @@ section {
 }
 
 .map-item-container {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
 .map-item {
     padding: 15px 5px;
     color: #fff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     height: 50px;
     width: 300px;
@@ -465,48 +451,76 @@ section {
     border-radius: 5px;
 }
 
+@media (max-width: 800px) {
+    .map-item {
+        padding: 5px 5px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        height: 35px;
+        width: 250px;
+        line-height: 1.5rem;
+        margin-bottom: 3px;
+        border-radius: 5px;
+    }
+    .map-item-container {
+        margin-bottom: .5rem;
+    }
+}
+
 .map-item-1 {
-    background-color: #f9d326;
+    background-color: #FEA399;
 }
 
 .map-item-2 {
-    background-color: #d58ebf;
+    background-color: #F9B885;
 }
 
 .map-item-3 {
-    background-color: #6feb8c;
+    background-color: #D2DB68;
 }
 
 .map-item-4 {
-    background-color: #f48882
+    background-color: #A6E96A;
 }
 
 .map-item-5 {
-    background-color: #69d2e2;
+    background-color: #63E170;
 }
 
 .map-item-6 {
-    background-color: #f53163;
+    background-color: #5CD7BE;
 }
 
 .map-item-7 {
-    background-color: #9398de;
+    background-color: #5587CB;
 }
 
 .map-item-8 {
-    background-color: #85d337;
+    background-color: #7B4EBE;
 }
 
 .map-item-9 {
-    background-color: #40b3be;
+    background-color: #AF4799;
 }
-
-
 
 /*Star Card*/
 
+.star-card {
+    text-align: center;
+}
+
 .star-card img {
     max-height: 80px;
+    -webkit-box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.1);
+}
+
+.star-card a p {
+    font-size: .9rem;
+    text-transform: uppercase;
+    color: var(--blue-hover);
 }
 
 .star-card a:hover {
@@ -515,11 +529,7 @@ section {
 
 /*=== CLAIM ASYLUM ===*/
 
-
-
 /*=== WELFARE INTERVIEW ===*/
-
-
 
 /*=== LOCAL AUTHORITY CARE ===*/
 
@@ -539,20 +549,32 @@ section {
     padding: 20px;
 }
 
+.card-heading {
+    background-color: khaki;
+    width: 100%;
+    text-align: center;
+    padding: 5px 0;
+    margin-bottom: 2rem;
+}
+
+.card-heading h4 {
+    color: var(--card-front);
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin: 0;
+}
+
 .card-container p {
     color: #fff;
     font-size: 1.1rem;
     width: 80%;
-    margin-top: 3rem;
 }
 
-.card-front, .card-back{
+.card-front, .card-back {
     position: absolute;
     width: 338px;
     height: 475px;
-    background: url('https://rcopestake65.github.io/right_to_remain_dev/images/problem-card.png');
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-color: var(--card-front);
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -569,27 +591,74 @@ section {
 }
 
 .card-back {
-    background: url('https://rcopestake65.github.io/right_to_remain_dev/images/problem-card-back.png');
+    background-color: var(--card-back);
 }
-.card-full-btn{
+
+.card-full-btn {
     cursor: pointer;
+    color: #fff;
+    align-self: flex-end;
+    padding-right: 10px;
+    text-transform: uppercase;
+    font-size: .8rem;
+    transition: all .3s ease-in-out;
 }
-.card-grid-item-3{
+
+.card-full-btn:hover {
+    color: var(--blue-hover);
+}
+
+.card-full-btn::after {
+    content: "...";
+}
+
+.card-grid-item-3 {
     grid-row: 2 / 2;
     grid-column: 1 / 1;
 }
-.card-full{
-    background-color: lightcoral;
+
+.card-full {
+    background-color: var(--card-back);
+    border: 20px solid #FFFFF0;
+    border-radius: 10px;
     grid-column: 1 / -1;
     grid-row: 2 / 3;
     width: 100%;
     display: none;
+    -webkit-box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    top: 20px;
+    position: relative;
 }
-.flip-btn, .flip-btn-back{
+
+.card-full p {
+    color: #fff;
+    font-size: 1.1rem;
+    width: 80%;
+}
+
+.card-full-close-btn {
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.card-full-close-btn:hover {
+    color: var(--blue-hover);
+}
+
+.flip-btn, .flip-btn-back {
     position: absolute;
     bottom: 0;
     cursor: pointer;
 }
+
 /*=== STAR CARDS ===*/
 
 .container.star-cards {
