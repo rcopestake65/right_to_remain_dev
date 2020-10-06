@@ -107,6 +107,17 @@ gsap.to(".illustration-1", { duration: 2, x: 0, y: 0, opacity: 1, delay: .3 });
 
 gsap.set(".illustration-2", { opacity: 0, x: 150 });
 gsap.to(".illustration-2", { duration: 2, x: 50, y: 0, opacity: 1, delay: .3 });
+
+//=========== ASYLUM ===================================
+
+gsap.set(".asylum h2", { opacity: 0, x: -50, borderBottom: 0 });
+gsap.to(".asylum h2", { duration: 1, x: 0, y: 0, opacity: 1, delay: .1 });
+
+gsap.set(".asylum img:nth-of-type(1n)", { opacity: 0, x: -50, borderBottom: 0 });
+gsap.to(".asylum img:nth-of-type(1n)", { duration: 1, x: 0, y: 0, opacity: 1, delay: .1 });
+
+
+
 // ========== PROBLEMS & ACTIONS  ======================
 
 //problem 1
