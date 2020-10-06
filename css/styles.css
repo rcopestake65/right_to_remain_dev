@@ -539,6 +539,7 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    justify-items: center;
 }
 
 .card-container {
@@ -659,6 +660,27 @@ section {
     cursor: pointer;
 }
 
+
+/*small screen adjustments*/
+@media (max-width: 500px){
+    .problem-container {
+        grid-template-columns: 1fr;
+    }
+    .card-container {
+        width: 290px;
+        height: 475px;
+    }
+    .card-front, .card-back {
+        width: 290px;
+        height: 475px
+    }
+    .container {
+        padding: 0 30px 30px 30px;
+        position: relative;
+        max-width: 1000px;
+        margin: 0;
+    }
+}
 /*=== STAR CARDS ===*/
 
 .container.star-cards {
