@@ -391,11 +391,22 @@ section {
 /*==== OVERVIEW ===*/
 
 .overview-section {
-    background-image: url(https://rcopestake65.github.io/right_to_remain_dev/images/walking-man-4.png), url(https://rcopestake65.github.io/right_to_remain_dev/images/walking-women.png);
+    /*background-image: url(https://rcopestake65.github.io/right_to_remain_dev/images/walking-man-4.png), url(https://rcopestake65.github.io/right_to_remain_dev/images/walking-women.png);
     background-repeat: no-repeat;
-    background-position: 10% center, 90% 45%;
+    background-position: 10% center, 90% 45%;*/
+    position: relative;
 }
-
+.illustration-1, .illustration-2{
+    position: absolute;
+}
+.illustration-1{
+    top: 25%;
+    left: 10%;
+}
+.illustration-2{
+    top: 25%;
+    right: 10%;
+}
 .container.overview {
     position: relative;
     display: flex;
@@ -613,17 +624,34 @@ section {
     content: "...";
 }
 
-.card-grid-item-3 {
-    grid-row: 2 / 2;
-    grid-column: 1 / 1;
-}
+/*positioning grid items for large screens*/
 
+@media (min-width: 500px) {
+    .card-grid-item-3 {
+        grid-row: 2 / 2;
+        grid-column: 1 / 1;
+    }
+    .card-full-3 {
+        grid-column: 1 / -1;
+        grid-row: 2 / 3;
+    }
+}
+/*positioning grid items for small screens*/
+
+@media (max-width: 500px) {
+    .card-grid-item-3{
+        grid-column: 1 / -1;
+        grid-row: 3 / 3;
+    }
+    .card-full-3 {
+        grid-column: 1 / -1;
+        grid-row: 3 / 3;
+    }
+}
 .card-full {
     background-color: var(--card-back);
     border: 20px solid #FFFFF0;
     border-radius: 10px;
-    grid-column: 1 / -1;
-    grid-row: 2 / 3;
     width: 100%;
     display: none;
     -webkit-box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
@@ -641,7 +669,9 @@ section {
     font-size: 1.1rem;
     width: 80%;
 }
-
+.card-full p:last-of-type {
+margin-bottom: 2rem;
+}
 .card-full-close-btn {
     color: #fff;
     position: absolute;
@@ -660,27 +690,27 @@ section {
     cursor: pointer;
 }
 
-
 /*small screen adjustments*/
-@media (max-width: 500px){
+
+@media (max-width: 500px) {
     .problem-container {
         grid-template-columns: 1fr;
     }
     .card-container {
         width: 290px;
         height: 475px;
+        padding: 0;
     }
     .card-front, .card-back {
         width: 290px;
         height: 475px
     }
-    .container {
-        padding: 0 30px 30px 30px;
+    .card-full {
+        top: 0;
         position: relative;
-        max-width: 1000px;
-        margin: 0;
     }
 }
+
 /*=== STAR CARDS ===*/
 
 .container.star-cards {

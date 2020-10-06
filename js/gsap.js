@@ -101,7 +101,12 @@ function starOver() {
 function starOut() {
   gsap.to(this, .2, {  scaleX: '1', scaleY: '1' });
 }
+//illustrations
+gsap.set(".illustration-1", { opacity: 0, x: -150 });
+gsap.to(".illustration-1", { duration: 2, x: 0, y: 0, opacity: 1, delay: .3 });
 
+gsap.set(".illustration-2", { opacity: 0, x: 150 });
+gsap.to(".illustration-2", { duration: 2, x: 50, y: 0, opacity: 1, delay: .3 });
 // ========== PROBLEMS & ACTIONS  ======================
 
 //problem 1
