@@ -790,10 +790,10 @@ section.asylum {
     position: relative;
 }
 
-.card-full p {
+.card-full{
     color: #fff;
     font-size: 1.1rem;
-    width: 80%;
+    z-index: 100;
 }
 
 .card-full p:last-of-type {
@@ -870,61 +870,76 @@ section.star-cards {
     -moz-box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
 }
-.card-btn{
+
+.card-btn {
     cursor: pointer;
 }
-.card-btn-1{
+
+.card-btn-1 {
     grid-column: 1;
     grid-row: 1;
 }
-.card-btn-2{
+
+.card-btn-2 {
     grid-column: 1;
     grid-row: 2;
 }
-.card-btn-3{
+
+.card-btn-3 {
     grid-column: 1;
     grid-row: 3;
 }
-.card-btn-4{
+
+.card-btn-4 {
     grid-column: 1;
     grid-row: 4;
 }
-.card-btn-5{
+
+.card-btn-5 {
     grid-column: 1;
     grid-row: 5;
 }
-.card-btn-6{
+
+.card-btn-6 {
     grid-column: 1;
     grid-row: 6;
 }
-.card-btn-7{
+
+.card-btn-7 {
     grid-column: 1;
     grid-row: 7;
 }
-.card-btn-8{
+
+.card-btn-8 {
     grid-column: 1;
     grid-row: 8;
 }
-.card-btn-9{
+
+.card-btn-9 {
     grid-column: 1;
     grid-row: 9;
 }
-.card-btn-10{
+
+.card-btn-10 {
     grid-column: 1;
     grid-row: 10;
 }
-.card-btn-11{
+
+.card-btn-11 {
     grid-column: 1;
     grid-row: 11;
 }
-.card-btn-12{
+
+.card-btn-12 {
     grid-column: 1;
     grid-row: 12;
 }
-.card-btn-13{
+
+.card-btn-13 {
     grid-column: 1;
     grid-row: 13;
 }
+
 .card-menu-item h5 {
     max-width: 150px;
     padding: 5px;
@@ -1010,20 +1025,23 @@ section.star-cards {
     padding: 40px;
     text-align: left;
     border: 15px solid ivory;
-border-radius: 10px;
--webkit-box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
--moz-box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
-box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
 }
-.card-1{
+
+.card-1 {
     grid-column: 1;
     grid-row: 1;
 }
-.card-2{
+
+.card-2 {
     grid-column: 1;
     grid-row: 2;
 }
-.card-3{
+
+.card-3 {
     grid-column: 1;
     grid-row: 3;
 }
