@@ -33,10 +33,10 @@ gsap.to(".shape-1", { duration: 1, x: 0, y: 0, opacity: 1, scale: 1.2, transform
 gsap.set(".shape-2", {opacity: 0 });
 gsap.to(".shape-2", { duration: 2, x: 0, y: 0, opacity: 1, delay: 2 });
 */
-var tlshape = gsap.timeline({defaults:{duration: .8, scale: .2, ease: Back.easeOut.config(2), opacity: 0 }});
-tlshape.from(".shape-1", {delay: .5,  transformOrigin: 'center'});
-tlshape.from(".shape-2", {delay: 0,  transformOrigin: 'center'});
-tlshape.from(".shape-3", {delay: 0,  transformOrigin: 'center'});
+var tlshape = gsap.timeline({ defaults: { duration: .8, scale: .2, ease: Back.easeOut.config(2), opacity: 0 } });
+tlshape.from(".shape-1", { delay: .5, transformOrigin: 'center' });
+tlshape.from(".shape-2", { delay: 0, transformOrigin: 'center' });
+tlshape.from(".shape-3", { delay: 0, transformOrigin: 'center' });
 
 //=============== OVERVIEW & NAVIGATION =====================================================================
 
@@ -61,10 +61,10 @@ gsap.to(".map-item-7", { delay: .7, });
 gsap.to(".map-item-8", { delay: .8, });
 
 //tab slide out btn
-gsap.set(".arrow-right", {opacity: .5});  
+gsap.set(".arrow-right", { opacity: .5 });
 gsap.to(".arrow-right", { opacity: 1, duration: 1, repeat: -1, yoyo: true });
 //tab slide down btn mobile
-gsap.set(".arrow-down", {opacity: .5});  
+gsap.set(".arrow-down", { opacity: .5 });
 gsap.to(".arrow-down", { opacity: 1, duration: 1, repeat: -1, yoyo: true });
 
 
@@ -95,11 +95,11 @@ gsap.set(".star-card", { transformOrigin: '100% 100%' });
 $(".star-card").hover(starOver, starOut);
 
 function starOver() {
-  gsap.to(this, .2, { scaleX: '1.05', scaleY: '1.05', transformOrigin:"center center" });
+  gsap.to(this, .2, { scaleX: '1.05', scaleY: '1.05', transformOrigin: "center center" });
 }
 
 function starOut() {
-  gsap.to(this, .2, {  scaleX: '1', scaleY: '1' });
+  gsap.to(this, .2, { scaleX: '1', scaleY: '1' });
 }
 //illustrations
 gsap.set(".illustration-1", { opacity: 0, x: -150 });
@@ -113,44 +113,47 @@ gsap.to(".illustration-2", { duration: 2, x: 50, y: 0, opacity: 1, delay: .3 });
 gsap.set(".asylum h2", { opacity: 0, x: -50, borderBottom: 0 });
 gsap.to(".asylum h2", { duration: 1, x: 0, y: 0, opacity: 1, delay: .1 });
 
-gsap.set(".asylum img:nth-of-type(1n)", { opacity: 0, x: -50, borderBottom: 0 });
-gsap.to(".asylum img:nth-of-type(1n)", { duration: 1, x: 0, y: 0, opacity: 1, delay: .1 });
+gsap.set(".asylum img.face", { opacity: 0, x: -50, borderBottom: 0 });
+gsap.to(".asylum img.face", { duration: 1, x: 0, y: 0, opacity: 1, delay: .1 });
 
 
 
 // ========== PROBLEMS & ACTIONS  ======================
-CSSPlugin.defaultTransformPerspective = 1000;//not sure this is needed
 
-gsap.set($(".card-back"), {rotationY:-180});
 
-$.each($(".card-container"), function(i,element) {
-  
-	var frontCard = $(this).children(".card-front"),
-      backCard = $(this).children(".card-back"),
-      tlcardShow = new TimelineMax({paused:true});
-	
-	tlcardShow
-		.to(frontCard, 1, {rotationY:180})
-		.to(backCard, 1, {rotationY:0},0)
-		//.to(element, .5, {z:50},0)
-		//.to(element, .5, {z:0},.5);
-    
-       element.animation = tlcardShow;
-       forward = false;
+gsap.set($(".card-back"), { rotationY: -180 });
 
-       $('.card-container').click(function() {
-        if(forward)
-  {
-    this.animation.reverse();
-  }
-  else
-  {
-    this.animation.play(); 
-  }
-  //this toggles the boolean on each click event
-  forward = !forward  ? true : false;
-    });
-    });
+$.each($(".card-container"), function (i, element) {
+
+  var frontCard = $(this).children(".card-front"),
+    backCard = $(this).children(".card-back"),
+    tlcardShow = new TimelineMax({ paused: true });
+
+  tlcardShow
+    .to(frontCard, 1, { rotationY: 180 })
+    .to(backCard, 1, { rotationY: 0 }, 0)
+    ;
+  //.to(element, .5, {z:50},0)
+  //.to(element, .5, {z:0},.5);
+
+  element.animation = tlcardShow;
+
+  var forward = false;
+
+  $(this).click(function () {
+    if (forward) {
+      this.animation.reverse();
+    }
+    else {
+      this.animation.play();
+    }
+
+    forward = !forward;
+
+  });
+
+});
+
 
 
 //Problem Read More cards
@@ -166,7 +169,7 @@ $(".card-full-btn-3").on("click", function () {
   tlcardFull3.play();
 });
 
-tlcardFull3.to('.card-full-3', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex"});
+tlcardFull3.to('.card-full-3', { scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex" });
 
 $(".card-full-close-btn-3").on("click", function () {
   tlcardFull3.reverse();
@@ -184,42 +187,43 @@ $(".card-full-btn-5").on("click", function () {
   tlcardFull5.play();
 });
 
-tlcardFull5.to('.card-full-5', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex"});
+tlcardFull5.to('.card-full-5', { scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex" });
 
 $(".card-full-close-btn-5").on("click", function () {
   tlcardFull5.reverse();
 });
 
+//Problem 7 read more cards
+//hide until read more btn clicked
+gsap.set([".card-full-7"], { opacity: 0, scaleX: 0, scaleY: 0, display: "none" });
 
+/*card-full show*/
+var tlcardFull7 = new gsap.timeline({ paused: true });
 
-/////////////////////////////////////////////////////
-/*card-full show
-var tlcardFull = new gsap.timeline({ paused: true });
-
-$(".card-full-btn").on("click", function () {
-  tlcardFull.play();
+$(".card-full-btn-7").on("click", function () {
+  tlcardFull7.play();
 });
 
-tlcardFull.to('.card-full', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex"});
+tlcardFull7.to('.card-full-7', { scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex" });
 
-
-
-$(".card-full-close-btn").on("click", function () {
-  tlcardFull.reverse();
+$(".card-full-close-btn-7").on("click", function () {
+  tlcardFull7.reverse();
 });
-*/
+
 
 //=========== STAR CARDS ==================
 
 //all cards hidden
-gsap.set([".card-1", ".card-2"], { opacity: 0, scaleX: 0, scaleY: 0, display: "none" });
+gsap.set([".card"], { opacity: 0, scaleX: 0, scaleY: 0, display: "none" });
 
+///////////////////////////////////////////////////////
 
 
 /*card-1 show*/
+
 var tlcards1 = new gsap.timeline({ paused: true });
 
-$(".card-1-btn").on("click", function () {
+$(".card-btn-1").on("click", function () {
   tlcards1.play();
 });
 
@@ -235,17 +239,35 @@ $(".card-close-btn").on("click", function () {
 /*card-2 show*/
 var tlcards2 = new gsap.timeline({ paused: true });
 
-$(".card-2-btn").on("click", function () {
+$(".card-btn-2").on("click", function () {
   tlcards2.play();
 });
 
-tlcards2.to('.card-2', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "block"});
+tlcards2.to('.card-2', { scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "block" });
 
 var tlcardsClose2 = new gsap.timeline({ paused: true });
 
 $(".card-close-btn").on("click", function () {
   tlcards2.reverse();
 });
+
+/*card-3 show*/
+var tlcards3 = new gsap.timeline({ paused: true });
+
+$(".card-btn-3").on("click", function () {
+  tlcards3.play();
+});
+
+tlcards3.to('.card-3', { scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "block" });
+
+var tlcardsClose3 = new gsap.timeline({ paused: true });
+
+$(".card-close-btn").on("click", function () {
+  tlcards3.reverse();
+});
+
+///////////////////////////////////////////////////////
+
 
 //mouseover star cards 
 gsap.set(".card-btn", { transformOrigin: '100% 100%' });
