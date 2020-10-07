@@ -14,13 +14,13 @@ client notes 02-10-20
 **Missing section**
 "Problem cards should be laid underneath the page content like a deck of cards"
 
-"I don't like the purple"
+
 
 "Claim Asylum headline text to be larger
 
 She referenced the Coram voice website (https://coramvoice.org.uk/) and said she likes the lightness and the illustration (edited) 
 
-She said the titles should be bigger
+
 
 She'd like spaces between the items on https://rcopestake65.github.io/right_to_remain_dev/overview.html
 

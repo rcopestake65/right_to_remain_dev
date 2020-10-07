@@ -119,42 +119,89 @@ gsap.to(".asylum img:nth-of-type(1n)", { duration: 1, x: 0, y: 0, opacity: 1, de
 
 
 // ========== PROBLEMS & ACTIONS  ======================
-CSSPlugin.defaultTransformPerspective = 1000;//not sure this is needed
 
-gsap.set($(".card-back"), {rotationY:-180});
+//problem 1
+gsap.set($(".card-back-1"), {rotationY:-180});
 
 $.each($(".card-container"), function(i,element) {
   
-	var frontCard = $(this).children(".card-front"),
-      backCard = $(this).children(".card-back"),
-      tlcardShow = new TimelineMax({paused:true});
+	var frontCard1 = $(this).children(".card-front-1"),
+      backCard1 = $(this).children(".card-back-1"),
+      tlcardShow1 = new TimelineMax({paused:true});
 	
-	tlcardShow
-		.to(frontCard, 1, {rotationY:180})
-		.to(backCard, 1, {rotationY:0},0)
-		//.to(element, .5, {z:50},0)
-		//.to(element, .5, {z:0},.5);
+	tlcardShow1
+		.to(frontCard1, 1, {rotationY:180})
+		.to(backCard1, 1, {rotationY:0},0)
+		.to(element, .5, {z:50},0)
+		.to(element, .5, {z:0},.5);
+	
+    $(".flip-btn-1").on("click", function(){
+      tlcardShow1.play();
+      
+  });
+
+  $(".flip-btn-back-1").on("click", function(){
+    tlcardShow1.reverse();
     
-       element.animation = tlcardShow;
-       forward = false;
-
-       $('.card-container').click(function() {
-        if(forward)
-  {
-    this.animation.reverse();
-  }
-  else
-  {
-    this.animation.play(); 
-  }
-  //this toggles the boolean on each click event
-  forward = !forward  ? true : false;
-    });
-    });
+});
 
 
-//Problem Read More cards
+  
+});
+//problem 2
+gsap.set($(".card-back-2"), {rotationY:-180});
 
+$.each($(".card-container"), function(i,element) {
+  
+	var frontCard2 = $(this).children(".card-front-2"),
+      backCard2 = $(this).children(".card-back-2"),
+      tlcardShow2 = new TimelineMax({paused:true});
+	
+	tlcardShow2
+		.to(frontCard2, 1, {rotationY:180})
+		.to(backCard2, 1, {rotationY:0},0)
+		.to(element, .5, {z:50},0)
+		.to(element, .5, {z:0},.5);
+	
+    $(".flip-btn-2").on("click", function(){
+      tlcardShow2.play();
+      
+  });
+
+  $(".flip-btn-back-2").on("click", function(){
+    tlcardShow2.reverse();
+    
+});
+
+
+  
+});
+//problem 3
+gsap.set($(".card-back-3"), {rotationY:-180});
+
+$.each($(".card-container"), function(i,element) {
+  
+	var frontCard3 = $(this).children(".card-front-3"),
+      backCard3 = $(this).children(".card-back-3"),
+      tlcardShow3 = new TimelineMax({paused:true});
+	
+	tlcardShow3
+		.to(frontCard3, 1, {rotationY:180})
+		.to(backCard3, 1, {rotationY:0},0)
+		.to(element, .5, {z:50},0)
+		.to(element, .5, {z:0},.5);
+	
+    $(".flip-btn-3").on("click", function(){
+      tlcardShow3.play();
+      
+  });
+
+  $(".flip-btn-back-3").on("click", function(){
+    tlcardShow3.reverse();
+    
+});
+  
+});
 //Problem 3 read more cards
 //hide until read more btn clicked
 gsap.set([".card-full-3"], { opacity: 0, scaleX: 0, scaleY: 0, display: "none" });
@@ -168,11 +215,66 @@ $(".card-full-btn-3").on("click", function () {
 
 tlcardFull3.to('.card-full-3', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex"});
 
+
+
 $(".card-full-close-btn-3").on("click", function () {
   tlcardFull3.reverse();
 });
 
 
+//problem 4
+gsap.set($(".card-back-4"), {rotationY:-180});
+
+$.each($(".card-container"), function(i,element) {
+  
+	var frontCard4 = $(this).children(".card-front-4"),
+      backCard4 = $(this).children(".card-back-4"),
+      tlcardShow4 = new TimelineMax({paused:true});
+	
+	tlcardShow4
+		.to(frontCard4, 1, {rotationY:180})
+		.to(backCard4, 1, {rotationY:0},0)
+		.to(element, .5, {z:50},0)
+		.to(element, .5, {z:0},.5);
+	
+    $(".flip-btn-4").on("click", function(){
+      tlcardShow4.play();
+      
+  });
+
+  $(".flip-btn-back-4").on("click", function(){
+    tlcardShow4.reverse();
+    
+});
+  
+});
+
+//problem 5
+gsap.set($(".card-back-5"), {rotationY:-180});
+
+$.each($(".card-container"), function(i,element) {
+  
+	var frontCard5 = $(this).children(".card-front-5"),
+      backCard5 = $(this).children(".card-back-5"),
+      tlcardShow5 = new TimelineMax({paused:true});
+	
+	tlcardShow5
+		.to(frontCard5, 1, {rotationY:180})
+		.to(backCard5, 1, {rotationY:0},0)
+		.to(element, .5, {z:50},0)
+		.to(element, .5, {z:0},.5);
+	
+    $(".flip-btn-5").on("click", function(){
+      tlcardShow5.play();
+      
+  });
+
+  $(".flip-btn-back-5").on("click", function(){
+    tlcardShow5.reverse();
+    
+});
+  
+});
 //Problem 5 read more cards
 //hide until read more btn clicked
 gsap.set([".card-full-5"], { opacity: 0, scaleX: 0, scaleY: 0, display: "none" });
@@ -186,28 +288,15 @@ $(".card-full-btn-5").on("click", function () {
 
 tlcardFull5.to('.card-full-5', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex"});
 
+var tlcardsClose5 = new gsap.timeline({ paused: true });
+
 $(".card-full-close-btn-5").on("click", function () {
   tlcardFull5.reverse();
 });
 
 
 
-/////////////////////////////////////////////////////
-/*card-full show
-var tlcardFull = new gsap.timeline({ paused: true });
 
-$(".card-full-btn").on("click", function () {
-  tlcardFull.play();
-});
-
-tlcardFull.to('.card-full', {scaleX: 1, scaleY: 1, transformOrigin: "center center", opacity: 1, duration: .5, display: "flex"});
-
-
-
-$(".card-full-close-btn").on("click", function () {
-  tlcardFull.reverse();
-});
-*/
 
 //=========== STAR CARDS ==================
 
