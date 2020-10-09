@@ -556,7 +556,42 @@ section {
 .map-item-9 {
     background-color: #AF4799;
 }
+/* Overview 2 colour scheme*/
+.overview2 .map-item-1 {
+    background-color:#FA8A40;
+}
 
+.overview2 .map-item-2 {
+    background-color: #F5A624;
+}
+
+.overview2 .map-item-3 {
+    background-color:#EDDF0D;
+}
+
+.overview2 .map-item-4 {
+    background-color: #91E400;
+}
+
+.overview2 .map-item-5 {
+    background-color: #12D700;
+}
+
+.overview2 .map-item-6 {
+    background-color: #0071B3;
+}
+
+.overview2 .map-item-7 {
+    background-color: #18009E;
+}
+
+.overview2 .map-item-8 {
+    background-color: #770087;
+}
+
+.overview2 .map-item-9 {
+    background-color:#87003D;
+}
 /*Star Card*/
 
 .star-card {
