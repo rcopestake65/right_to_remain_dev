@@ -456,6 +456,7 @@ section {
     height: 50px;
     width: 300px;
     line-height: 1rem;
+    text-transform: capitalize;
 }
 
 /*
