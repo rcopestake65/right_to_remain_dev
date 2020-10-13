@@ -40,36 +40,36 @@ gsap.set(".star-card", { x: 50, opacity: 0 });
 gsap.to(".star-card", { duration: 2, x: 0, y: 0, opacity: 1, delay: 0.3 });
 
 gsap.set(
-  [".map-item-1", ".map-item-3", ".map-item-5", ".map-item-7", ".map-item-9"],
+  [".nav-item-1", ".nav-item-3", ".nav-item-5", ".nav-item-7", ".nav-item-9"],
   { x: -40, opacity: 0 }
 );
-gsap.set([".map-item-2", ".map-item-4", ".map-item-6", ".map-item-8"], {
+gsap.set([".nav-item-2", ".nav-item-4", ".nav-item-6", ".nav-item-8"], {
   x: 40,
   opacity: 0,
 });
 
 gsap.to(
   [
-    ".map-item-1",
-    ".map-item-2",
-    ".map-item-3",
-    ".map-item-4",
-    ".map-item-5",
-    ".map-item-6",
-    ".map-item-7",
-    ".map-item-8",
-    ".map-item-9",
+    ".nav-item-1",
+    ".nav-item-2",
+    ".nav-item-3",
+    ".nav-item-4",
+    ".nav-item-5",
+    ".nav-item-6",
+    ".nav-item-7",
+    ".nav-item-8",
+    ".nav-item-9",
   ],
   { duration: 1, x: 0, opacity: 1, ease: "power.inOut(1, 0.3)", autoAlpha: 1 }
 );
 
-gsap.to(".map-item-2", { delay: 0.2 });
-gsap.to(".map-item-3", { delay: 0.3 });
-gsap.to(".map-item-4", { delay: 0.4 });
-gsap.to(".map-item-5", { delay: 0.5 });
-gsap.to(".map-item-6", { delay: 0.6 });
-gsap.to(".map-item-7", { delay: 0.7 });
-gsap.to(".map-item-8", { delay: 0.8 });
+gsap.to(".nav-item-2", { delay: 0.2 });
+gsap.to(".nav-item-3", { delay: 0.3 });
+gsap.to(".nav-item-4", { delay: 0.4 });
+gsap.to(".nav-item-5", { delay: 0.5 });
+gsap.to(".nav-item-6", { delay: 0.6 });
+gsap.to(".nav-item-7", { delay: 0.7 });
+gsap.to(".nav-item-8", { delay: 0.8 });
 
 //tab slide out btn
 gsap.set(".arrow-right", { opacity: 0.5 });
@@ -78,9 +78,9 @@ gsap.to(".arrow-right", { opacity: 1, duration: 1, repeat: -1, yoyo: true });
 gsap.set(".arrow-down", { opacity: 0.5 });
 gsap.to(".arrow-down", { opacity: 1, duration: 1, repeat: -1, yoyo: true });
 
-//mouseover form map items
+//mouseover form nav items
 
-$(".map-item").hover(over, out);
+$(".nav-item").hover(over, out);
 
 function over() {
   gsap.to(this, 0.2, { x: 10 });

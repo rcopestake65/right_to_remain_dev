@@ -12,6 +12,16 @@ Steve Mersereau | Richard Copestake
     --off-white: #f4f4f4;
     --card-front: #45b0dd;
     --card-back: #4aca4b;
+    /*section colours*/
+    --asylum: #EBB4FE;
+    --welfare: #BA74F9;
+    --local: #5941EF;
+    --evidence: #1F7FE0;
+    --interview: #13C8D6;
+    --positive: #09CA7A;
+    --refusal: #5BAD00;
+    --submit-appeal: #E05000;
+    --appeal-hearing: #AD4800;
     /*font-sizes*/
     --p-large: 1.3rem;
     --p-medium: 1.1rem;
@@ -141,10 +151,9 @@ section {
     min-height: 100vh;
 }
 
-.asylum .container, .star-cards .container {
+.asylum .container, .star-cards .container, .welfare .container, .local .container, .evidence .container, .interview.container, .positive .container, .refusal .container, .submit-appeal .container, .appeal-hearing .container {
     padding-top: 2rem;
 }
-
 
 @media (max-width: 800px) {
     .container {
@@ -169,12 +178,12 @@ section {
     }
 }
 
-/*===== MAIN NAVIGATION - Asylum Journey ==================*/
+/*===== MAIN NAVIGATION  ==================*/
 
 /*=== open & close btns ===*/
 
 .menu-open-btn {
-    width: 50px;
+    width: 75px;
     height: 100px;
     padding: 5px 0 0 5px;
     position: absolute;
@@ -192,19 +201,78 @@ section {
     box-shadow: 3px 6px 3px 0px rgba(0, 0, 0, 0.1);
 }
 
-.menu-open-btn-mobile {
+.menu-open-btn p {
     display: none;
 }
+
+@media (min-width: 800px) {
+    .menu-open-btn p {
+        transform: rotate(-90deg);
+        display: block;
+        text-align: center;
+        margin: 0 0 0 .1rem;
+        text-transform: uppercase;
+    }
+    .menu-open-btn p i {
+        transform: rotate(90deg);
+        display: block;
+        text-align: center;
+        padding-left: 10px;
+    }
+}
+
+/*.menu-open-btn-mobile {
+    display: none;
+}*/
 
 .arrow-right, .arrow-down {
     transition: .3s all;
     transform: rotate(0deg);
 }
 
+/* arrow colours for each section*/
+
+.asylum .arrow-right, .asylum .menu-open-btn p {
+    color: var(--asylum);
+}
+
+.welfare .arrow-right, .welfare .menu-open-btn p {
+    color: var(--welfare);
+}
+
+.local .arrow-right, .local .menu-open-btn p {
+    color: var(--local);
+}
+
+.evidence .arrow-right, .evidence .menu-open-btn p {
+    color: var(--evidence);
+}
+
+.interview .arrow-right, .interview .menu-open-btn p {
+    color: var(--interview);
+}
+
+.positive .arrow-right, .positive .menu-open-btn p {
+    color: var(--positive);
+}
+
+.refusal .arrow-right, .refusal .menu-open-btn p {
+    color: var(--refusal);
+}
+
+.submit-appeal .arrow-right, .submit-appeal .menu-open-btn p {
+    color: var(--submit-appeal);
+}
+
+.appeal-hearing .arrow-right, .appeal-hearing .menu-open-btn p {
+    color: var(--appeal-hearing);
+}
+
 .arrow-right.rotate, .arrow-down.rotate {
-    -moz-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
+    -moz-transform: rotate(-9deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+    padding-left: 0;
 }
 
 .menu-open-btn .fa-arrow-circle-down {
@@ -220,7 +288,7 @@ section {
     }
 }
 
-.menu-open-btn:hover, .menu-open-btn-mobile:hover {
+.menu-open-btn:hover {
     cursor: pointer;
 }
 
@@ -242,6 +310,75 @@ section {
     -webkit-box-shadow: 3px 6px 3px 0px rgba(209, 209, 209, 0.53);
     -moz-box-shadow: 3px 6px 3px 0px rgba(209, 209, 209, 0.53);
     box-shadow: 3px 6px 3px 0px rgba(209, 209, 209, 0.53);
+}
+
+.nav-item-container {
+    margin-bottom: 1rem;
+}
+
+.nav-item {
+    padding: 15px 5px;
+    color: #fff;
+    font-size: 1rem;
+    text-align: center;
+    height: 50px;
+    width: 300px;
+    line-height: 1.3rem;
+    margin-bottom: 3px;
+    border-radius: 5px;
+}
+
+@media (max-width: 800px) {
+    .navp-item {
+        padding: 5px 5px;
+        color: #fff;
+        font-weight: bold;
+        text-align: center;
+        height: 35px;
+        width: 250px;
+        line-height: 1.5rem;
+        margin-bottom: 3px;
+        border-radius: 5px;
+    }
+    .nav-item-container {
+        margin-bottom: .5rem;
+    }
+}
+
+.nav-item-1 {
+    background-color: var(--asylum);
+}
+
+.nav-item-2 {
+    background-color: var(--welfare);
+}
+
+.nav-item-3 {
+    background-color: var(--local);
+}
+
+.nav-item-4 {
+    background-color: var(--evidence);
+}
+
+.nav-item-5 {
+    background-color: var(--interview);
+}
+
+.nav-item-6 {
+    background-color: var(--positive);
+}
+
+.nav-item-7 {
+    background-color: var(--refusal);
+}
+
+.nav-item-8 {
+    background-color: var(--submit-appeal);
+}
+
+.nav-item-9 {
+    background-color: var(--appeal-hearing);
 }
 
 .show {
@@ -289,7 +426,7 @@ section {
 
 /*nav items*/
 
-.nav-item-container {
+.nav-container {
     margin-bottom: 2rem;
     margin-left: 10px;
     opacity: 1;
@@ -300,7 +437,7 @@ section {
 }
 
 @media (max-width: 700px) {
-    .nav-item-container {
+    .nav-container {
         margin-bottom: 2rem;
         margin-left: 0;
         opacity: 1;
@@ -321,6 +458,7 @@ section {
     line-height: 1rem;
 }
 
+/*
 .nav-item-1, .nav-item-2, .nav-item-3, .nav-item-4, .nav-item-5, .nav-item-6, .nav-item-7, .nav-item-8 {
     position: relative;
     top: 0;
@@ -328,6 +466,7 @@ section {
     background-color: #FA9A06;
     border-bottom: 1px dashed #F3C98A;
 }
+*/
 
 .home-btn img {
     max-width: 70px;
@@ -488,110 +627,6 @@ section {
     }
 }
 
-.map-item-container {
-    margin-bottom: 1rem;
-}
-
-.map-item {
-    padding: 15px 5px;
-    color: #fff;
-    font-size: 1rem;
-    text-align: center;
-    height: 50px;
-    width: 300px;
-    line-height: 1.3rem;
-    margin-bottom: 3px;
-    border-radius: 5px;
-}
-
-@media (max-width: 800px) {
-    .map-item {
-        padding: 5px 5px;
-        color: #fff;
-        font-weight: bold;
-        text-align: center;
-        height: 35px;
-        width: 250px;
-        line-height: 1.5rem;
-        margin-bottom: 3px;
-        border-radius: 5px;
-    }
-    .map-item-container {
-        margin-bottom: .5rem;
-    }
-}
-
-.map-item-1 {
-    background-color: #FEA399;
-}
-
-.map-item-2 {
-    background-color: #F9B885;
-}
-
-.map-item-3 {
-    background-color: #D2DB68;
-}
-
-.map-item-4 {
-    background-color: #A6E96A;
-}
-
-.map-item-5 {
-    background-color: #63E170;
-}
-
-.map-item-6 {
-    background-color: #5CD7BE;
-}
-
-.map-item-7 {
-    background-color: #5587CB;
-}
-
-.map-item-8 {
-    background-color: #7B4EBE;
-}
-
-.map-item-9 {
-    background-color: #AF4799;
-}
-/* Overview 2 colour scheme*/
-.overview2 .map-item-1 {
-    background-color: #EBB4FE;
-}
-
-.overview2 .map-item-2 {
-    background-color: #BA74F9;
-}
-
-.overview2 .map-item-3 {
-    background-color: #5941EF;
-}
-
-.overview2 .map-item-4 {
-    background-color: #1F7FE0;
-}
-
-.overview2 .map-item-5 {
-    background-color:#13C8D6;
-}
-
-.overview2 .map-item-6 {
-    background-color:#09CA7A;
-}
-
-.overview2 .map-item-7 {
-    background-color: #5BAD00;
-}
-
-.overview2 .map-item-8 {
-    background-color: #E05000;
-}
-
-.overview2 .map-item-9 {
-    background-color:#AD4800;
-}
 /*Star Card*/
 
 .star-card {
@@ -618,18 +653,92 @@ section {
 /*=== CLAIM ASYLUM ===*/
 
 section.asylum {
-  background-color: #FEA399;
+    background-color: var(--asylum);
 }
 
-
-
 .asylum h2, .asylum h4 {
-    color: #FEA399;
+    color: var(--asylum);
 }
 
 /*=== WELFARE INTERVIEW ===*/
 
+section.welfare {
+    background-color: var(--welfare);
+}
+
+.welfare h2, .welfare h4 {
+    color: var(--welfare);
+}
+
 /*=== LOCAL AUTHORITY CARE ===*/
+
+section.local {
+    background-color: var(--local);
+}
+
+.local h2, .local h4 {
+    color: var(--local);
+}
+
+/*=== EVIDENCE FORM ===*/
+
+section.evidence {
+    background-color: var(--evidence);
+}
+
+.evidence h2, .evidence h4 {
+    color: var(--evidence);
+}
+
+/*=== SUBSTANTIVE INTERVIEW ===*/
+
+section.interview {
+    background-color: var(--interview);
+}
+
+.interview h2, .interview h4 {
+    color: var(--interview);
+}
+
+/*=== HOME OFFICE POSITIVE DECISION ===*/
+
+section.positive {
+    background-color: var(--positive);
+}
+
+.positive h2, .positive h4 {
+    color: var(--positive);
+}
+
+/*=== HOME OFFICE REFUSAL ===*/
+
+section.refusal {
+    background-color: var(--refusal);
+}
+
+.refusal h2, .refusal h4 {
+    color: var(--positive);
+}
+
+/*=== SUBMIT APPEAL ===*/
+
+section.submit-appeal {
+    background-color: var(--submit-appeal);
+}
+
+.submit-appeal h2, .submit-appeal h4 {
+    color: var(--submit-appeal);
+}
+
+/*=== APPEAL HEARING ===*/
+
+section.appeal-hearing {
+    background-color: var(--appeal-hearing);
+}
+
+.appeal-hearing h2, .appeal-hearing h4 {
+    color: var(--appeal-hearing);
+}
 
 /*=== PROBLEMS & ACTIONS ====*/
 
@@ -687,6 +796,42 @@ section.asylum {
     box-shadow: 2px 2px 13px -6px rgba(0, 0, 0, 0.75);
     border: 20px solid #FFFFF0;
     border-radius: 10px;
+}
+
+.asylum .card-front {
+    background-color: var(--asylum);
+}
+
+.welfare .card-front {
+    background-color: var(--welfare);
+}
+
+.local .card-front {
+    background-color: var(--local);
+}
+
+.evidence .card-front {
+    background-color: var(--evidence);
+}
+
+.interview .card-front {
+    background-color: var(--interview);
+}
+
+.positive .card-front {
+    background-color: var(--positive);
+}
+
+.refusal .card-front {
+    background-color: var(--refusal);
+}
+
+.submit-appeal .card-front {
+    background-color: var(--submit-appeal);
+}
+
+.appeal-hearing .card-front {
+    background-color: var(--appeal-hearing);
 }
 
 .card-back {
@@ -828,7 +973,7 @@ section.asylum {
     position: relative;
 }
 
-.card-full{
+.card-full {
     color: #fff;
     font-size: 1.1rem;
     z-index: 100;
@@ -912,6 +1057,7 @@ section.star-cards {
 .card-btn {
     cursor: pointer;
 }
+
 /*
 .card-btn-1 {
     grid-column: 1;
@@ -978,6 +1124,7 @@ section.star-cards {
     grid-row: 13;
 }
 */
+
 .card-menu-item h5 {
     max-width: 150px;
     padding: 5px;
@@ -1074,12 +1221,14 @@ section.star-cards {
     transform: translate(-50%, -50%);*/
     z-index: 20;
 }
-@media (max-width: 500px){
+
+@media (max-width: 500px) {
     .card {
         width: 100%;
         padding: 10px;
-    } 
+    }
 }
+
 /*
 .card-1 {
     grid-column: 1;
@@ -1096,6 +1245,7 @@ section.star-cards {
     grid-row: 3;
 }
 */
+
 .card-close-btn {
     position: absolute;
     top: 10px;
@@ -1112,7 +1262,7 @@ section.star-cards {
 /*Media queries for cards*/
 
 @media (max-width: 500px) {
-   /* .card-1, .card-2 {
+    /* .card-1, .card-2 {
         left: 0;
         width: 90%;
         padding: 20px;
