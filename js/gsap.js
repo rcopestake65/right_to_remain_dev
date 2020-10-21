@@ -139,33 +139,67 @@ gsap.to(".asylum img.face", {duration: 1, x: 0, y: 0, opacity: 1, delay: 0.1,});
 
 // ========== PROBLEMS & ACTIONS  ======================
 
+//flipping the cards using the btn at the base of the card
 gsap.set($(".card-back"), { rotationY: -180 });
 
 $.each($(".card-container"), function (i, element) {
-  var frontCard = $(this).children(".card-front"),
-    backCard = $(this).children(".card-back"),
-    tlcardShow = gsap.timeline({ paused: true });
+ let frontCard = $(this).children(".card-front");
+ let backCard = $(this).children(".card-back");
+ let cardFlip = frontCard.children(".flip-btn");
+ let cardFlipBack = backCard.children(".flip-btn-back");
+ let tlcardShow = gsap.timeline({ paused: true });
 
   tlcardShow
     .to(frontCard, { duration: 1, rotationY: 180 })
     .to(backCard, { duration: 1, rotationY: 0 }, 0);
-  //.to(element, .5, {z:50},0)
-  //.to(element, .5, {z:0},.5);
 
-  element.animation = tlcardShow;
 
-  var forward = false;
+  // element.animation = tlcardShow;
 
-  $(this).click(function () {
-    if (forward) {
-      this.animation.reverse();
-    } else {
-      this.animation.play();
-    }
+  // let forward = false;
 
-    forward = !forward;
-  });
-});
+  $(cardFlip).click(function () {
+    
+      tlcardShow.play();
+  
+    })
+    $(cardFlipBack).click(function () {
+  
+      tlcardShow.reverse();
+    
+    })
+
+  })
+
+/////////////////////////////////////////////////////
+//flipping the card using the whole card as a clickable target - causes problems with the read more btn, so replaced with code above
+// gsap.set($(".card-back"), { rotationY: -180 });
+
+// $.each($(".card-container"), function (i, element) {
+//   var frontCard = $(this).children(".card-front"),
+//     backCard = $(this).children(".card-back"),
+//     tlcardShow = gsap.timeline({ paused: true });
+
+//   tlcardShow
+//     .to(frontCard, { duration: 1, rotationY: 180 })
+//     .to(backCard, { duration: 1, rotationY: 0 }, 0);
+//   //.to(element, .5, {z:50},0)
+//   //.to(element, .5, {z:0},.5);
+
+//   element.animation = tlcardShow;
+
+//   var forward = false;
+
+//   $(this).click(function () {
+//     if (forward) {
+//       this.animation.reverse();
+//     } else {
+//       this.animation.play();
+//     }
+
+//     forward = !forward;
+//   });
+// });
 
 //Problem Read More Cards
 // //hide until read more btn clicked
